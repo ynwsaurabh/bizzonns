@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes productAnimation {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.textAnimation {
+  animation: productAnimation 0.5s ease-out;
+}
+
+
+/* styles/globals.css */
+@keyframes testAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slidein300 {
+  animation: testAnimation 1s ease 300ms forwards;
+}
+.slidein500 {
+  animation: testAnimation 1s ease 500ms forwards;
+}
+.slidein700 {
+  animation: testAnimation 1s ease 700ms forwards;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
