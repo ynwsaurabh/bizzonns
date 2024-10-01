@@ -33,7 +33,8 @@ const Contact = () => {
                       Our Location
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      Cuferum Technical Advisory Pvt. Ltd. B-702, Tulip Apartments, Hiranandani Garden, Powai, Mumbai City, MH 400076 IN
+                      321, Powai Plaza76, Hiranandani Gardens, Powai, Mumbai,
+                      Maharashtra- 400076
                     </p>
                   </div>
                 </div>
@@ -53,12 +54,15 @@ const Contact = () => {
                       How Can We Help?
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      <a href="mailto:sales@cuferumtechnical.com">sales@cuferumtechnical.com</a>
-                      
+                      <a href="mailto:contact@bizzonns.com">
+                      contact@bizzonns.com
+                      </a>
                     </p>
-                    <p className="mt-1 text-base text-body-color dark:text-dark-6">
-                    <a href="mailto:hr@cuferumtechnical.com">hr@cuferumtechnical.com</a>
-                    </p>
+                    {/* <p className="mt-1 text-base text-body-color dark:text-dark-6">
+                      <a href="mailto:hr@cuferumtechnical.com">
+                        hr@cuferumtechnical.com
+                      </a>
+                    </p> */}
                   </div>
                 </div>
               </div>
