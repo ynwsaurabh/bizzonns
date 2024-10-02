@@ -24,8 +24,8 @@ const Navbar: FC = () => {
       <nav className=" px-3.5 flex items-center justify-between w-full max-w-7xl mx-auto">
         <Link href="/">
           <div className="flex items-center gap-x-3 z-[999] relative">
-            <img src="/bizzonnsD.png" alt="" className="w-40 block dark:hidden" />
-            <img src="/bizzonns.png" alt="" className="w-40 hidden dark:block" />
+            <img src="/bizzonnsD.png" alt="" className="w-36 md:w-40 block dark:hidden" />
+            <img src="/bizzonns.png" alt="" className="w-36 md:w-40 hidden dark:block" />
             {/* <h3 className="text-lg font-semibold">Bizzoons</h3> */}
           </div>
         </Link>
@@ -36,6 +36,7 @@ const Navbar: FC = () => {
           ))}
         </ul>
         <div className="flex items-center gap-x-2 md:gap-x-5">
+          <div className="flex flex-row-reverse items-center gap-x-2 md:gap-x-5">
           <button
             onClick={toggleTheme}
             className="text-white focus:outline-none"
@@ -72,6 +73,7 @@ const Navbar: FC = () => {
               Request Callback
             </button>
           </Link>
+          </div>
           <div className="xl:hidden mt-[8px]">
             <MobMenu />
           </div>

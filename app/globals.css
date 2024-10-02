@@ -17,6 +17,32 @@
   animation: productAnimation 0.5s ease-out;
 }
 
+@keyframes marquee {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(calc(-50% - var(--gap)/2))
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(calc(-50% - var(--gap)/2))
+  }
+
+  to {
+      transform: translateX(0)
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--duration) linear infinite;
+}
 
 /* styles/globals.css */
 @keyframes testAnimation {
