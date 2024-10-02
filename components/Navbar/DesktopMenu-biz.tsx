@@ -1,12 +1,13 @@
-'use client'
-import { useState, FC } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+"use client";
+import { useState, FC, useRef } from "react";
+import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface SubMenu {
   icon?: FC;
   name: string;
-  desc: string;
+  href: string;
 }
 
 interface Menu {
@@ -21,9 +22,14 @@ interface DesktopMenuProps {
 }
 
 const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
-  const [isHover, toggleHover] = useState<boolean>(false);
-  const toggleHoverMenu = (): void => {
-    toggleHover(!isHover);
+  const [isHover, setHover] = useState<boolean>(false);
+  const submenuRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = () => setHover(true);
+  const handleMouseLeave = () => {
+    if (submenuRef.current && !submenuRef.current.matches(":hover")) {
+      setHover(false);
+    }
   };
 
   const subMenuAnimate = {
@@ -33,7 +39,7 @@ const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
       transition: {
         duration: 0.5,
       },
-      display: 'block',
+      display: "block",
     },
     exit: {
       opacity: 0,
@@ -42,7 +48,7 @@ const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
         duration: 0.5,
       },
       transitionEnd: {
-        display: 'none',
+        display: "none",
       },
     },
   };
@@ -52,11 +58,11 @@ const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
   return (
     <motion.li
       className="group/link"
-      onHoverStart={toggleHoverMenu}
-      onHoverEnd={toggleHoverMenu}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       key={menu.name}
     >
-      <span className=" flex flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
+      <span className="flex flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
         {menu.name}
         {hasSubMenu && (
           <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
@@ -64,18 +70,21 @@ const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
       </span>
       {hasSubMenu && (
         <motion.div
-          className="absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur-md bg-white"
+          ref={submenuRef}
+          className="absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur-md bg-white dark:bg-[#18181A]"
           initial="exit"
-          animate={isHover ? 'enter' : 'exit'}
+          animate={isHover ? "enter" : "exit"}
           variants={subMenuAnimate}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <div
             className={`grid gap-7 ${
               menu.gridCols === 3
-                ? 'grid-cols-3'
+                ? "grid-cols-3"
                 : menu.gridCols === 2
-                ? 'grid-cols-2'
-                : 'grid-cols-1'
+                ? "grid-cols-2"
+                : "grid-cols-1"
             }`}
           >
             {hasSubMenu &&
@@ -87,13 +96,13 @@ const DesktopMenuBiz: FC<DesktopMenuProps> = ({ menu }) => {
                     </p>
                   )}
                   <div className="flex flex-center gap-x-1a group/menubox">
-                    {/* <div className="bg-black dark:bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-gray-500 dark:group-hover/menubox:bg-white text-white dark:group-hover/menubox:text-gray-900 duration-300">
-                      {submenu.icon && <submenu.icon />}
-                    </div> */}
-                    <div>{submenu.icon && <submenu.icon />}</div>
+                    {/* <div>{submenu.icon && <submenu.icon />}</div> */}
                     <div>
-                      <h6 className="font-semibold text-black hover:text-orange-500 dark:text-white">{submenu.name}</h6>
-                      {/* <p className="text-sm text-gray-400">{submenu.desc}</p> */}
+                      <Link href={submenu.href}>
+                        <h6 className="font-semibold text-black hover:text-orange-500 dark:text-white dark:hover:text-orange-500">
+                          {submenu.name}
+                        </h6>
+                      </Link>
                     </div>
                   </div>
                 </div>
