@@ -1,37 +1,31 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 import Link from "next/link";
-
+import AOS from "aos";
 const About = () => {
+  useEffect(() =>{
+    AOS.init({
+      offset: 80,
+      duration: 1000,
+      // once: true,
+    });
+  }),[]
   return (
-    <div id="aboutus" className="w-full h-full  bg-white dark:bg-black">
+    <div id="aboutus" className="w-full h-full overflow-hidden  bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto antialiased py-4 md:py-8 px-8 ">
         <div className="mt-4 text-xs z-10 w-fit bg-white dark:bg-gray-900 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
           <span>#1 CONSULTING COMPANY</span>
           <div className="absolute inset-x-0 -bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-px w-full"></div>
         </div>
-        <h1 className="text-2xl md:text-4xl text-neutral-800 dark:text-white mt-4 text-left">
+        <h1 data-aos="fade-down" className="text-2xl md:text-4xl text-neutral-800 dark:text-white mt-4 text-left">
           About Us
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center pt-5 md:p-20 md:h-auto dark:bg-black bg-white relative max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center md:h-auto dark:bg-black bg-white relative max-w-7xl mx-auto">
         {/* Text Section */}
-        <div className="flex-1 max-w-7xl mt-10 mx-auto px-4 md:px-8 relative">
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 2,
-            }}
-            className="text-left"
-          >
+        <div className="flex-1 max-w-7xl mt-5 mx-auto px-4 md:px-8 relative">
+          <div className="text-left" data-aos="fade-right">
+
             <h2 className="text-xl md:text-4xl font-bold text-black dark:text-white">
               Excellence In Consulting
             </h2>
@@ -51,7 +45,7 @@ const About = () => {
               Services are all part of our methodology.
             </p>
             <Link href="/about">
-              <div className="relative slidein900 cursor-pointer my-4 flex space-x-2 dark:text-[#000] text-white items-center z-10 rounded-full bg-[rgb(0,0,0)] dark:bg-white py-2 px-4 ring-1 ring-white/10 inline-flex">
+              <div className="relative slidein900 cursor-pointer my-4 flex space-x-2 dark:text-[#000] hover:bg-gray-600 hover:text-[#fff] dark:hover:bg-[#000] dark:hover:text-white text-white items-center z-10 rounded-full bg-[rgb(0,0,0)] dark:bg-white py-2 px-4 ring-1 ring-white/10 inline-flex">
                 <span>Explore more</span>
                 <svg
                   width="16"
@@ -74,9 +68,9 @@ const About = () => {
                 </svg>
               </div>
             </Link>
-          </motion.div>
+          </div>
         </div>
-        <div className="relative flex-1 px-7 flex items-center justify-center lg:mb-0 lg:w-1/2 bg-[url('/about.gif')] bg-cover bg-center ">
+        <div data-aos="fade-left" className="relative flex-1 px-7 flex items-center justify-center lg:mb-0 lg:w-1/2 bg-[url('/about.gif')] bg-cover bg-center ">
           <img
             className="object-contain object-center transition-opacity duration-300 block w-full lg:w-3/4"
             srcSet="/about1.png"

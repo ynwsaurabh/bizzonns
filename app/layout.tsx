@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import "aos/dist/aos.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

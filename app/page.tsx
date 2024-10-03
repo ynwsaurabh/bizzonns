@@ -3,6 +3,8 @@ import CoreProcess from '@/components/CoreProcess'
 import Differentiators from '@/components/Differentiators'
 import Home from '@/components/Home'
 import Products from '@/components/products'
+import ExpandableTable from '@/components/TableComponent'
+import Testimonials from '@/components/Testimonials'
 import React from 'react'
 
 const page = () => {
@@ -13,6 +15,7 @@ const page = () => {
       <Products />
       <Differentiators />
       <CoreProcess />
+      <Testimonials />
     </div>
   )
 }

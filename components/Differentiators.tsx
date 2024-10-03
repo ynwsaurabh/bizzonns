@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import useVisibleItems from "./hooks/useVisibleItems";
+import AOS from "aos";
 
 interface Product {
   href: string;
@@ -59,6 +60,12 @@ const products: Product[] = [
 
 const Differentiators: FC = () => {
   const { visibleItems, refs } = useVisibleItems();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 120,
+    });
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 bg-white dark:bg-gray-900 overflow-hidden">
@@ -101,7 +108,7 @@ const Differentiators: FC = () => {
                 </div>
 
                 <div className="space-y-6 pt-6 text-lg leading-8 text-gray-700 transition-all duration-500 group-hover:text-white">
-                  <p className="font-medium">{product.description}</p>
+                  <p data-aos="fade-down" className="font-medium">{product.description}</p>
                 </div>
 
                 <div className="pt-6 text-lg font-semibold leading-7">

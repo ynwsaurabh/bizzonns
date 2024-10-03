@@ -1,0 +1,41 @@
+.gTableWrapper {
+    /* Add styles for the table wrapper if needed */
+}
+
+.gTable {
+    /* Styles for the table */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.gTable th, .gTable td {
+    border: 2px solid #555;
+    padding: 8px;
+}
+
+.expandChildTable {
+    cursor: pointer;
+    background: #fc8606;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 0.90;
+}
+
+.expandChildTable.selected {
+    background: #fc8606;
+}
+
+.childTableRow {
+    display: none; /* This will be handled by React state */
+}
+
+.gTable th:nth-child(7),
+.gTable td:nth-child(7) {
+    background-color: #EFF1F5;
+    color: #000;
+}
