@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import FactCounter from "../FactCounter";
 
 interface Item {
   href: string;
@@ -50,7 +51,7 @@ const CompanyRegistration: React.FC<CompanyRegistrationProps> = ({
               </div>
             </div>
           </div>
-          <h1 className=" text-[28px] md:text-[36px] font-bold  leading-[1.2] md:leading-[52px]">
+          <h1 className=" text-[28px] md:text-[36px] font-bold text-black leading-[1.2] md:leading-[52px]">
             {title}
           </h1>
           <ul className="flex flex-col gap-4 md:gap-3 max-md:py-5 noListMargin">
@@ -70,11 +71,17 @@ const CompanyRegistration: React.FC<CompanyRegistrationProps> = ({
               </li>
             ))}
           </ul>
+          <div className=" lg:mt-28">
+            <FactCounter />
+          </div>
         </div>
 
         {/* Registration Form */}
         <ContactForm />
       </div>
+      {/* <div className="lg:absolute lg:z-10 lg:top-[450px] lg:left-0 hidden lg:block max-w-[65%] ">
+      <FactCounter />
+      </div> */}
     </div>
   );
 };

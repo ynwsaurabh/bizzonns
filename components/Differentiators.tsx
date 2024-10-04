@@ -107,7 +107,7 @@ const Differentiators: FC = () => {
                 </h2>
                 </div>
 
-                <div className="space-y-6 pt-6 text-lg leading-8 text-gray-700 transition-all duration-500 group-hover:text-white">
+                <div className="space-y-6 pt-6 text-lg leading-8 text-gray-400 transition-all duration-500 group-hover:text-white">
                   <p data-aos="fade-down" className="font-medium">{product.description}</p>
                 </div>
 

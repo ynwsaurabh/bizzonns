@@ -64,6 +64,7 @@ const MobMenu: React.FC = () => {
                         <li
                           key={name}
                           className="p-2 flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                          onClick={toggleDrawer}
                         >
                           <Icon size={17} />
                           {name}

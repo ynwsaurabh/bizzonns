@@ -52,12 +52,12 @@ const FactCounter: React.FC = () => {
           }`}
         >
           <div className="flex items-center">
-            <div className="text-[20px] md:text-7xl font-bold">
+            <div className="text-[20px] md:text-7xl text-black font-bold">
               {visibleFacts[index] && (
                 <CountUp start={0} end={fact.count} duration={2} />
               )}
             </div>
-            <span className="text-[20px] md:text-7xl font-black">{fact.indicator}</span>
+            <span className="text-[20px] md:text-7xl text-black font-black">{fact.indicator}</span>
           </div>
           <p className="text-gray-700 text-[10px] md:text-base text-center">{fact.label}</p>
         </div>
