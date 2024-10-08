@@ -6,6 +6,9 @@ interface ComparisonRow {
   data: string[];
   details?: string[];
 }
+interface ComparisonTableProps {
+  index: number; // Prop to indicate which column to style
+}
 
 const rows: ComparisonRow[] = [
   {
@@ -124,7 +127,7 @@ const rows: ComparisonRow[] = [
   },
 ];
 
-const ComparisonTable: React.FC = () => {
+const ComparisonTable: React.FC<ComparisonTableProps> = ({index}) => {
   const [expandedRows, setExpandedRows] = useState<number[]>([]);
 
   const toggleRow = (index: number) => {
@@ -134,7 +137,7 @@ const ComparisonTable: React.FC = () => {
   };
 
   return (
-    <div className="g-table-wraper w-[95%] mx-auto text-gray-900 dark:text-white lg:max-w-7xl shadow-md  overflow-auto">
+    <div className="g-table-wraper w-[95%] mx-auto text-gray-900 dark:text-white lg:max-w-7xl shadow-lg rounded-md overflow-auto">
       <table className="g-table highlight-3 overflow-x-auto" width="100%">
         <thead>
           <tr>
@@ -150,7 +153,7 @@ const ComparisonTable: React.FC = () => {
         <tbody>
           {rows.map((row, rowIndex) => (
             <React.Fragment key={rowIndex}>
-              <tr>
+              <tr className="hover:bg-gray-100">
                 {row.details ? (
                   <td>
                     <div className="max-w-[90%] mx-auto flex items-center justify-around">
@@ -200,7 +203,7 @@ const ComparisonTable: React.FC = () => {
           display: table-row;
         }
         .g-table th,
-        .g-table td:nth-child(6) {
+        .g-table td:nth-child(${index}) {
           background-color: #eff1f5;
           color: #000;
         }
@@ -228,7 +231,7 @@ const ComparisonTable: React.FC = () => {
           display: table-row;
         }
         .g-table th,
-        .g-table td:nth-child(6) {
+        .g-table td:nth-child(${index}) {
           background-color: #eff1f5;
           color: #000;
         }

@@ -5,9 +5,9 @@ import ComparisonTable from "@/components/Table";
 import Testimonials from "@/components/Testimonials";
 import React from "react";
 const descriptions = [
-  "Ideal for Small Scale Business Size.",
-  "Our Professional Team understands your requirements and assists you in selecting the Best Suitable Business Structure.",
-  "Starting at Rs 4,999/- Onwards",
+  "This is the Most Suitable Business Format for Small and Medium Sized Enterprises.",
+  "Starting at Rs 3999/- Onwards",
+  "(Duration – 10-15 Days)",
 ];
 
 const processItems = [
@@ -172,7 +172,7 @@ const page = () => {
     <div className="bg-white dark:bg-gray-900">
       <div className="mt-16 bg-[#F5FAFF]">
         <CompanyRegistration
-          title="Partnership Firm Registration"
+          title="Limited Liability Partnership (LLP)"
           parent="Startup"
           href="/"
           descriptions={descriptions}
@@ -191,16 +191,7 @@ const page = () => {
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
               <p className="text-sm lg:text-base">
-                A partnership Firm is among the key types of business
-                organization. A partnership is formed when two or more persons
-                mutually agree to come together and start a business on mutual
-                consent.
-              </p>
-              <p className="text-sm mt-2 lg:text-base">
-                The Indian Partnership Act, of 1932 governs and regulates
-                partnership firms in India. It defines it as an association of
-                two or more persons to carry on as co-owners of a business for
-                profit motive.
+              Limited Liability Partnership, known as LLP is governed under the Limited Liability Partnership Act, 2008. LLP is the most efficient format of business as it has features of both a Partnership Firm and a Private Limited. LLP’s Compliances are less than the Company, leading entrepreneurs to focus on their business without worrying about compliances.  It is the format where the liability of the partners is limited and it has separate and perpetual legal existence.
               </p>
             </div>
           </div>
@@ -232,7 +223,7 @@ const page = () => {
               Benefits Of
               <span className="text-[#3B82F6]">
                 {" "}
-                Partnership Firm Registration{" "}
+                Limited Liability Partnership (LLP){" "}
               </span>
             </h2>
           </div>
@@ -286,6 +277,7 @@ const page = () => {
                   </p>
                 </div>
               </div>
+              
             </div>
           </div>
 
@@ -316,7 +308,7 @@ const page = () => {
               Documentation For
               <span className="text-[#3B82F6]">
                 {" "}
-                Partnership Firm Registration{" "}
+                Limited Liability Partnership (LLP){" "}
               </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
@@ -346,6 +338,18 @@ const page = () => {
                     <p>
                       Address Proof of each partner(Aadhar card, Voter id,
                       Passport, DL)
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                    Latest Residence Proof (Electricity Bill, Gas bill, Mobile Bill)
                     </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px] ">

@@ -19,7 +19,7 @@ export const Menus = [
       },
       {
         name: "Section 8 Company",
-        href: "/startups/special-entities/",
+        href: "/startups/special-entities/section-8-company",
         icon: ChevronRight,
       },
       {
@@ -34,12 +34,12 @@ export const Menus = [
       },
       {
         name: "Trust Formation",
-        href: "/startups/special-entities/",
+        href: "/startups/special-entities/trust-registration",
         icon: ChevronRight,
       },
       {
-        name: "Private Limited",
-        href: "/startups/indian-entities/",
+        name: "Limited Liability Partnership",
+        href: "/startups/indian-entities/limited-liability-partnership",
         icon: ChevronRight,
       },
       {
@@ -53,13 +53,13 @@ export const Menus = [
         icon: ChevronRight,
       },
       {
-        name: "OPC Company",
-        href: "/startups/indian-entities/",
+        name: "Private Limited",
+        href: "/startups/indian-entities/private-limited-company",
         icon: ChevronRight,
       },
       {
         name: "Subsidiary Company",
-        href: "/startups/foreign-entities/",
+        href: "/startups/foreign-entities/subsidiary-company",
         icon: ChevronRight,
       },
       {
@@ -68,8 +68,8 @@ export const Menus = [
         icon: ChevronRight,
       },
       {
-        name: "Public Limited Company",
-        href: "/startups/indian-entities/",
+        name: "OPC Company",
+        href: "/startups/indian-entities/one-person-company",
         icon: ChevronRight,
       },
       {
@@ -83,8 +83,8 @@ export const Menus = [
         icon: ChevronRight,
       },
       {
-        name: "Limited Liability Partnership",
-        href: "/startups/indian-entities/",
+        name: "Public Limited Company",
+        href: "/startups/indian-entities/public-limited-company",
         icon: ChevronRight,
       },
       {

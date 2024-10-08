@@ -94,6 +94,7 @@ const ContactForm: React.FC = () => {
               value={formData.countryCode}
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              style={{ backgroundColor: 'white', color: 'black' }}
             >
               <option value="+91">+91</option>
               <option value="+62">+62</option>
@@ -116,6 +117,7 @@ const ContactForm: React.FC = () => {
               value={formData.service}
               onChange={handleChange}
               className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.service ? 'border-red-500' : ''}`}
+              style={{ backgroundColor: 'white', color: 'black' }}
             >
               <option value="">Select a service</option>
               <option value="service1">Service 1</option>

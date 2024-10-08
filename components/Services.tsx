@@ -57,7 +57,7 @@ const products: Product[] = [
   },
 ];
 
-const Products: FC = () => {
+const Services: FC = () => {
   const { visibleItems, refs } = useVisibleItems();
 
   return (
@@ -79,7 +79,7 @@ const Products: FC = () => {
           problems.
         </p>
         <Link href="/contact">
-          <div className="relative slidein900 cursor-pointer mt-4 flex space-x-2 text-white items-center z-10 rounded-full bg-black py-2 px-4 ring-1 ring-white/10 inline-flex">
+          <div className="relative slidein900 cursor-pointer mt-4 space-x-2 text-white items-center z-10 rounded-full bg-black py-2 px-4 ring-1 ring-white/10 inline-flex">
             <span>See all services</span>
             <svg
               width="16"
@@ -224,7 +224,7 @@ const Products: FC = () => {
 
                 {/* Enquire Now Button */}
                 <Link href="/contact">
-              <div className="relative slidein900 cursor-pointer my-4 flex space-x-2 dark:text-[#000] text-white items-center z-10 rounded-full dark:bg-white bg-[rgb(0,0,0)] py-2 px-4 ring-1 ring-white/10 inline-flex">
+              <div className="relative slidein900 cursor-pointer my-4 space-x-2 dark:text-[#000] text-white items-center z-10 rounded-full dark:bg-white bg-[rgb(0,0,0)] py-2 px-4 ring-1 ring-white/10 inline-flex">
                 <span>Enquire now</span>
                 <svg
                   width="16"
@@ -256,4 +256,4 @@ const Products: FC = () => {
   );
 };
 
-export default Products;
+export default Services;

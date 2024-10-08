@@ -1,7 +1,17 @@
-import SectionTitle from "./SectionTitle";
-import SingleFaq from "./SingleFaq";
+import React from 'react'
+import SectionTitle from './SectionTitle'
+import SingleFaq from './SingleFaq'
 
-const Faq = () => {
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface CustomFaqProps {
+  faqs: FaqItem[];
+}
+
+const CustomFaq: React.FC<CustomFaqProps> = ({ faqs }) => {
   return (
     <section className="relative z-20 overflow-hidden bg-white pb-8 pt-10 dark:bg-dark lg:pb-[50px] lg:pt-[100px]">
       <div className="container">
@@ -14,38 +24,16 @@ const Faq = () => {
         />
 
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
-          <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
-              question="Is it necessary to appoint a Nominee in OPC?"
-              answer="Appointment of Nominee is compulsory, as in the event of the death or incapacitation of the promoter, the Nominee becomes a member of the company, by default."
-            />
-            <SingleFaq
-              question="Which is the most suitable format, Private Limited Company or OPC?"
-              answer="Both of the above formats of business is the same, the main difference between the 2 is Pvt Ltd Company gets formed by 2 or more person, whereas to form an OPC, only one person is required. Thus, any single person who wants to form a company can incorporate an OPC."
-            />
-            <SingleFaq
-              question="What all Compliances are mandatory for OPC?"
-              answer="Being a One Person Company, it enjoys various Compliance Exemptions from the Companies Act 2013, like, as it is not required to hold an AGM yearly, and only 2 Board Meetings are required to be held in a year."
-            />
-          </div>
-
-          <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
-              question="OPC Can be converted into a Private Limited Company?"
-              answer="Mandatory Conversion arises, when the yearly turnover of the previous three consecutive years, crosses the threshold of 2 crores or when Paid up Share Capital exceeds Rs. 50 Lakhs. Voluntary Conversion can be done, upon completion of 2 years from the incorporation date of OPC."
-            />
-            <SingleFaq
-              question="Can an NRI become a Nominee in an OPC?"
-              answer="Yes, as per the Companies Act 2013, a Nominee can be a Non-Indian Resident, with having minimum age of 18 years. Also, at the time of the Formation of an OPC, the Consent of the Nominee is required."
-            />
-            <SingleFaq
-              question="Can an OPC raise funds?	"
-              answer="OPC cannot raise funds from General Public, however, it can raise the funds from Private Investors like Angel Investors, Venture Capitalists and financial Institution via Debt Funding."
-            />
-          </div>
+          {faqs.map((item, index) => (
+            <div key={index} className="w-full px-4 lg:w-1/2">
+              <SingleFaq
+                question={item.question}
+                answer={item.answer}
+              />
+            </div>
+          ))}
         </div>
       </div>
-
       <div>
         <span className="absolute left-4 top-4 -z-[1]">
           <svg
@@ -629,7 +617,7 @@ const Faq = () => {
         </span>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Faq;
+export default CustomFaq;

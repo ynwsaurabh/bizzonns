@@ -4,7 +4,7 @@ import CoreProcess from '@/components/CoreProcess'
 import Differentiators from '@/components/Differentiators'
 import Home from '@/components/Home'
 import Locations from '@/components/Locations'
-import Products from '@/components/products'
+import Services from '@/components/Services'
 import ExpandableTable from '@/components/TableComponent'
 import Testimonials from '@/components/Testimonials'
 import React from 'react'
@@ -14,7 +14,7 @@ const page = () => {
     <div className='bg-white dark:bg-gray-900'>
       <Home />
       <About />
-      <Products />
+      <Services />
       <Differentiators />
       <CoreProcess />
       <BusinessStats />

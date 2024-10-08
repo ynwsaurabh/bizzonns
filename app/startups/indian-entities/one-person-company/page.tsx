@@ -5,9 +5,9 @@ import ComparisonTable from "@/components/Table";
 import Testimonials from "@/components/Testimonials";
 import React from "react";
 const descriptions = [
-  "Ideal for Small Scale Business Size.",
-  "Our Professional Team understands your requirements and assists you in selecting the Best Suitable Business Structure.",
-  "Starting at Rs 4,999/- Onwards",
+  "This is suitable for an entrepreneur who wants to start a business alone.",
+  "This is suitable for an entrepreneur who wants to start a business alone. It is a New Concept introduced in the Companies Act 2013. Our Team of Professionals assists you in getting the One Person’s Company Registration.",
+  "Professional Charges start at Rs 4,999/- Onwards",
 ];
 
 const processItems = [
@@ -15,7 +15,7 @@ const processItems = [
     key: 0,
     title: "Digital Signature Certificate (DSC)",
     description:
-      "Persons who will be acting as a Partner or Designated Partner of the proposed company, need to apply for DSC. It is issued by the government-affirmed offices. DSC is required to sign and validate all the documents, as the entire process of registration is online.",
+      "Persons who will be acting as a director and shareholders of the proposed company, need to apply for DSC. It is required to sign and validate all the documents.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +37,9 @@ const processItems = [
   },
   {
     key: 1,
-    title: "Name Search and Approval",
+    title: "Name Approval",
     description:
-      "Proposed name availability needs to be preliminary checked on MCA, and then Name Reservation needs to be filed under “RUN -LLP”. ROC will check the name availability on different parameters and then will issue the name approval letter.",
+      "Proposed name needs to be approved by ROC. ROC will check the name availability on different parameters and then will issue the approval letter.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +61,9 @@ const processItems = [
   },
   {
     key: 2,
-    title: "LLP Incorporation",
+    title: "Company Incorporation",
     description:
-      "Form FiLLip needs to be filed for incorporation of LLP along with the DIN allotment and PAN TAN Application. This contains the Address of the Proposed LLP, Business Activities to be carried out, Details of Partners, and the Contribution by Partners.",
+      "Once the name is approved, the application needs to be made for the formation of the Company in Form Spice+ and the same is verified by a professional CA, CS or CMA.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -89,9 +89,9 @@ const processItems = [
   },
   {
     key: 3,
-    title: "Incorporation, PAN & TAN Certificate",
+    title: "Drafting of MOA & AOA",
     description:
-      "Once Form FiLLip is approved; a Certificate of Incorporation is issued by the Ministry of Corporate Affairs along with the PAN and TAN Card of the LLP.",
+      "Along with Spice+, the MOA & AOA of the Company also need to be filed. A Memorandum of Association (MOA) defines the fundamentals of the company and the Articles of Association (AOA) contains the rules & regulations of the Company.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -105,19 +105,17 @@ const processItems = [
         stroke-linejoin="round"
         className="prome-he15p0"
       >
-        <path d="M16 10h2" />
-        <path d="M16 14h2" />
-        <path d="M6.17 15a3 3 0 0 1 5.66 0" />
-        <circle cx="9" cy="11" r="2" />
-        <rect x="2" y="5" width="20" height="14" rx="2" />
+        <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+        <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+        <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
       </svg>
     ),
   },
   {
     key: 4,
-    title: "Filing of LLP Agreement",
+    title: "Incorporation Certificate",
     description:
-      "An LLP Agreement is to be filed in Form No 3 within 30 days of the date of Incorporation. LLP Agreement needs to be printed on Stamp Paper, of the State where the registered office of the LLP is located.",
+      "After verification of Spice+, Roc will issue the Certificate of Incorporation. Incorporation Certificate gets issued within 3-4 working days.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -140,9 +138,35 @@ const processItems = [
   },
   {
     key: 5,
+    title: "PAN & TAN Allotment",
+    description:
+      "With a certificate of incorporation pan and tan allotment will be made and a soft copy of pan and tan will be received by mail from the Department.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="prome-he15p0"
+      >
+        <path d="M16 10h2" />
+        <path d="M16 14h2" />
+        <path d="M6.17 15a3 3 0 0 1 5.66 0" />
+        <circle cx="9" cy="11" r="2" />
+        <rect x="2" y="5" width="20" height="14" rx="2" />
+      </svg>
+    ),
+  },
+  {
+    key: 6,
     title: "Opening Bank Current Account",
     description:
-      "Persons who will be acting as a Partner or Designated Partner of the proposed company, need to apply for DSC. It is issued by the government-affirmed offices. DSC is required to sign and validate all the documents, as the entire process of registration is online.",
+      "After receiving COI and other relevant documents, Private Limited can open the bank’s current account in the name of the Company.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +196,7 @@ const page = () => {
     <div className="bg-white dark:bg-gray-900">
       <div className="mt-16 bg-[#F5FAFF]">
         <CompanyRegistration
-          title="Partnership Firm Registration"
+          title="One-Person Company"
           parent="Startup"
           href="/"
           descriptions={descriptions}
@@ -191,16 +215,29 @@ const page = () => {
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
               <p className="text-sm lg:text-base">
-                A partnership Firm is among the key types of business
-                organization. A partnership is formed when two or more persons
-                mutually agree to come together and start a business on mutual
-                consent.
+                Companies Act 2013 introduced the new concept of One Person
+                Company, enabling a single entrepreneur to enter into a
+                Corporate Framework. Prior to 2013, it was not possible for a
+                single person to establish a company. Thus, it was a great
+                initiative from the government, as it enabled single individuals
+                to start their own companies, without searching for another
+                person.
               </p>
               <p className="text-sm mt-2 lg:text-base">
-                The Indian Partnership Act, of 1932 governs and regulates
-                partnership firms in India. It defines it as an association of
-                two or more persons to carry on as co-owners of a business for
-                profit motive.
+                Section 2(62) of the Companies Act 2013 defines One Person
+                Company as a Company which has only one person as a Promoter
+                member/Shareholder. In the case of OPC, it is mandatory to
+                appoint a “Nominee”, who will become the owner in case of any
+                death or disability of a member.
+              </p>
+              <p className="text-sm mt-2 lg:text-base">
+                One Person Company cannot voluntarily convert into any other
+                kind of company unless two years have expired from the date of
+                incorporation except in case its paid-up share capital exceeds
+                50 lakhs or turnover exceeds 2 Crore.
+              </p>
+              <p className="text-sm mt-2 lg:text-base">
+                An Indian or Non-Resident Indian can register an OPC in India.
               </p>
             </div>
           </div>
@@ -230,10 +267,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
-              <span className="text-[#3B82F6]">
-                {" "}
-                Partnership Firm Registration{" "}
-              </span>
+              <span className="text-[#3B82F6]"> One Person Company </span>
             </h2>
           </div>
         </div>
@@ -241,8 +275,8 @@ const page = () => {
           {/* Text Section */}
           <div className="relative scroll-mt-20 flex-none mx-auto lg:w-[60%] px-4 lg:px-10  my-5 md:my-0 lg:my-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className="flex flex-col">
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl mb-5">
+              <div className="flex flex-col space-y-5">
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
                   <h1 className="text-xl font-bold">Limited Liability</h1>
                   <p className="mt-3">
                     In a Limited Liability Partnership (LLP), partners are only
@@ -251,7 +285,7 @@ const page = () => {
                     for another's actions, unlike in traditional partnerships.
                   </p>
                 </div>
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
                   <h1 className="text-[19px] font-bold">
                     Separate Legal Entity
                   </h1>
@@ -265,24 +299,27 @@ const page = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col">
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl mb-5 rounded-2xl">
-                  <h1 className="text-xl font-bold">Lower Compliance</h1>
+              <div className="flex flex-col space-y-5">
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
+                  <h1 className="text-xl font-bold">Perpetual Existence</h1>
                   <p className="mt-3">
-                    Annual Compliance of an LLP is less as compared to a Private
-                    Limited Company. Thus, the annual charges of LLP Compliances
-                    are less than others, making it a cost-effective type of
-                    formation.
+                    It means that an OPC can continue indefinitely. The
+                    continuation of the business will not get affected by the
+                    condition of its owners. Thus, it is mandatory to appoint a
+                    Nominee at the time of OPC Registration. At the time of
+                    death of the existing member, the Nominee becomes a member
+                    of an OPC.
                   </p>
                 </div>
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
-                  <h1 className="text-xl font-bold">Easy to Start and Close</h1>
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
+                  <h1 className="text-xl font-bold">Better Accountability</h1>
                   <p className="mt-3">
-                    The Formation and Closure Process of an LLP is simple and
-                    cost-effective, as compared to a Private Limited Company.
-                    Thus, it is very effective for those start-ups who are
-                    unsure about the future of their business, as it leads to
-                    minimum cash outflow.
+                    OPC company accounts are easily available at MCA Portal.
+                    Anyone can access them and this acts as a transparency to
+                    their work and this helps in taking better investment
+                    decisions for others. This also helps in raising funds from
+                    Private Investors, as they rely on the accounts of the
+                    Company.
                   </p>
                 </div>
               </div>
@@ -314,10 +351,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation For
-              <span className="text-[#3B82F6]">
-                {" "}
-                Partnership Firm Registration{" "}
-              </span>
+              <span className="text-[#3B82F6]"> One Person Company </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
               <div className="p-5  ">
@@ -333,7 +367,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>PAN Card of each partner</p>
+                    <p>PAN Card of each Director & Shareholder</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -344,8 +378,20 @@ const page = () => {
                       height="20"
                     />
                     <p>
-                      Address Proof of each partner(Aadhar card, Voter id,
-                      Passport, DL)
+                      Address Proof (Driving License, Passport, Aadhar Card)
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      Latest Residence Proof (Electricity Bill, Water Bill, Gas
+                      Bill, and Bank Statement)
                     </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
@@ -356,7 +402,9 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>Latest Passport Size Photograph of each partner</p>
+                    <p>
+                      Passport Size Photograph of each Director & Shareholder
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -373,10 +421,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                      Latest Electricity Bill, Water Bill, and Gas bill of the
-                      office premises
-                    </p>
+                    <p>Latest Electricity Bill, Gas Bill of Office Premises</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -386,7 +431,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>NOC from owner/Rent Agreement</p>
+                    <p>NOC from Owner /Rent Agreement</p>
                   </li>
                 </ul>
               </div>
@@ -440,7 +485,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <ComparisonTable index={5} />
+      <ComparisonTable index={7} />
       <Faq />
     </div>
   );

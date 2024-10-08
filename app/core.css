@@ -292,11 +292,11 @@
         width: 2.5rem;
     }
 
-    .prome-9gy3o3>:not([hidden])~:not([hidden]) {
+    /* .prome-9gy3o3>:not([hidden])~:not([hidden]) {
         --un-space-y-reverse: 0;
         margin-top: calc(9rem * calc(1 - var(--un-space-y-reverse)));
         margin-bottom: calc(9rem * var(--un-space-y-reverse))
-    }
+    } */
 
     .prome-6peno4 {
         font-size: 1.875rem;

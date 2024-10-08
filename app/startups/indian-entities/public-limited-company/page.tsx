@@ -3,9 +3,9 @@ import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 const descriptions = [
-  "Suitable for a Single person who wants to start a business with the Zero or Minimum Fund.",
-  "Bizzonns helps you in selecting the Best Suitable Format for your business by understanding your requirements and needs. It also helps you in getting your Business registered and operational.",
-  "Professional fees starting at Rs. 1,500/- Onwards",
+  "A public limited company is a publicly traded entity that offers its shares to the public through a stock exchange or over-the-counter market.",
+  "Professional Charges start at Rs 9,999/- Onwards",
+  "(Duration – 10-15 Days)",
 ];
 
 const page = () => {
@@ -13,7 +13,7 @@ const page = () => {
     <div className="bg-white dark:bg-gray-900">
       <div className="mt-16 bg-[#F5FAFF]">
         <CompanyRegistration
-          title="Sole Proprietorship Registration"
+          title="Public Limited Company"
           parent="Startup"
           href="/"
           descriptions={descriptions}
@@ -24,7 +24,7 @@ const page = () => {
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
             <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Overview
+              Overview
             </p>
 
             <h2 className="text-[#3B82F6] font-poppins text-3xl lg:text-4xl font-semibold">
@@ -32,23 +32,20 @@ const page = () => {
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
               <p className="text-sm lg:text-base">
-                Sole Proprietorship is the easiest form of doing business in
-                India, as it is not governed by any specific law. It is a
-                single-person firm registration, where one person is the owner
-                and is personally liable for all debts and liabilities of the
-                business. It is owned and run by one natural person and in this,
-                there is no legal distinction between the owner and the
-                business.
-              </p>
-              <p className="text-sm lg:text-base">
-                Due to its ease of creation, low cost, and minimal compliance
-                requirements, sole proprietorship is a simpler type of business.
-                For the efficient operation of their firm, sole proprietorships
-                are advised to obtain a few of the below-mentioned
-                registrations-
+                A Public Limited Company is governed by the Companies Act 2013.
+                A Public Limited company can issue shares to the public at large
+                and raise money from the market. Its Stock can be acquired
+                either by Initial Public Offering (IPO) or by stock trading.
+                There are strict rules & regulations formulated by the Companies
+                Act for Public Limited Companies. Unlike a private limited
+                company, which restricts the transfer of shares and limits the
+                number of shareholders, a public limited company offers its
+                shares to the general public, allowing anyone to become a
+                shareholder.
               </p>
               <div className="font-medium text-[#606162] dark:text-gray-400">
                 <div className="p-5  ">
+                  Basic Requirements to Open Public Limited Company
                   <ul className="flex flex-col gap-4 md:gap-3 max-md:py-5 noListMargin">
                     <li className="flex items-start gap-[10px] md:text-[18px] ">
                       <img
@@ -58,7 +55,7 @@ const page = () => {
                         width="20"
                         height="20"
                       />
-                      <p>GST Registration</p>
+                      <p>Minimum 7 Shareholders</p>
                     </li>
                     <li className="flex items-start gap-[10px] md:text-[18px]">
                       <img
@@ -68,7 +65,7 @@ const page = () => {
                         width="20"
                         height="20"
                       />
-                      <p>Shop and Establishment Registration</p>
+                      <p>Minimum 3 Directors</p>
                     </li>
                     <li className="flex items-start gap-[10px] md:text-[18px]">
                       <img
@@ -78,7 +75,7 @@ const page = () => {
                         width="20"
                         height="20"
                       />
-                      <p>MSME/UDYAM Registration</p>
+                      <p>Minimum Paid up Capital of Rs 5 Lakhs</p>
                     </li>
                     <li className="flex items-start gap-[10px] md:text-[18px] text-[#606162]">
                       <img
@@ -88,7 +85,10 @@ const page = () => {
                         width="20"
                         height="20"
                       />
-                      <p>Professional Tax Registration</p>
+                      <p>
+                        Compulsory for a Public Company to add the word
+                        “Limited” at the end of its name
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -121,14 +121,14 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Required Documents For
-              <span className="text-[#3B82F6]">
-                {" "}
-                Proprietorship Firm Registration{" "}
-              </span>
+              <span className="text-[#3B82F6]"> Public Limited Company </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
               <div className="p-5  ">
-                <ul className="flex flex-col gap-4 md:gap-3 max-md:py-5 noListMargin">
+                <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl lg:mb-2 font-semibold">
+                  Promoters
+                </h2>
+                <ul className="flex flex-col gap-3 max-md:py-5 noListMargin">
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
                     <img
                       alt="blue tick"
@@ -137,7 +137,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>Aadhar Card</p>
+                    <p>PAN Card of each Director & Shareholder</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -147,7 +147,22 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>PAN Card/ Driving License/ Voter ID</p>
+                    <p>
+                      Address Proof (Driving License, Passport, Aadhar Card)
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      Latest Residence Proof (Electricity Bill, Water Bill, Gas
+                      Bill, and Bank Statement)
+                    </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
                     <img
@@ -157,8 +172,17 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>Current Bank Account</p>
+                    <p>
+                      Passport Size Photograph of each Director & Shareholder
+                    </p>
                   </li>
+                </ul>
+              </div>
+              <div className="p-5  ">
+                <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl lg:mb-2 font-semibold">
+                  Office Premises
+                </h2>
+                <ul className="flex flex-col gap-3 max-md:py-5 noListMargin">
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
                     <img
                       alt="blue tick"
@@ -167,9 +191,9 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>Office Address Proof</p>
+                    <p>Latest Electricity Bill, Gas Bill of Office Premises</p>
                   </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
                       alt="blue tick"
                       className="mt-[3px]"
@@ -177,7 +201,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p> Nature of Business</p>
+                    <p>NOC from Owner /Rent Agreement</p>
                   </li>
                 </ul>
               </div>
@@ -204,56 +228,68 @@ const page = () => {
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
             <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Advantages
+              Benefits
             </p>
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Advantages Of
-              <span className="text-[#3B82F6]">
-                {" "}
-                Sole Proprietorship Registration{" "}
-              </span>
+              Benefits Of
+              <span className="text-[#3B82F6]"> Public Limited Company </span>
             </h2>
           </div>
         </div>
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
-          <div className="relative scroll-mt-20 flex-none mx-auto lg:w-[60%] px-4 lg:px-10  my-5 md:my-0 lg:my-16">
+          <div className="relative scroll-mt-20 flex-none mx-auto lg:w-[60%] px-4 lg:px-10 my-5 md:my-0 lg:my-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="flex flex-col">
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl mb-5">
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl mb-5">
                   <h1 className="text-xl font-bold">
-                    Easy to Start and Close Business
+                    Transferability and Exit Options
                   </h1>
                   <p className="mt-3">
-                    Since it does not need to be registered under any specific
-                    Act, it is simple to start and close.
+                    Public limited companies provide better liquidity to
+                    shareholders as their shares can be freely traded on stock
+                    exchanges. This makes it easier for shareholders to exit
+                    their investments by selling their shares to interested
+                    buyers.
                   </p>
                 </div>
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
-                  <h1 className="text-[19px] font-bold">Less Compliance</h1>
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
+                  <h1 className="text-[19px] font-bold">
+                    Greater Investor Confidence
+                  </h1>
                   <p className="mt-3">
-                    As it is not governed by any of the Acts, very few
-                    compliances need to be adhered to. Thus, it also leads to
-                    Lesser Compliance costing.
+                    Public limited companies often enjoy higher investor
+                    confidence compared to other forms of business entities.
+                    Transparency in financial reporting, regulatory oversight,
+                    and the availability of information allows investors to make
+                    informed investment decisions.
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col">
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl mb-5 rounded-2xl">
-                  <h1 className="text-xl font-bold">Taxation Benefit</h1>
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl mb-5">
+                  <h1 className="text-xl font-bold">
+                    Enhanced Governance and Regulatory Compliance
+                  </h1>
                   <p className="mt-3">
-                    Proprietorship firms are subject to the same Income Tax
-                    Slabs as Individuals. Therefore, there are lower slab rates
-                    and benefits that apply to them.
+                    Public limited companies are subject to stricter governance
+                    and regulatory requirements. This fosters a culture of
+                    transparency, accountability, and ethical practices within
+                    the organization. Complying with regulations helps build
+                    investor confidence and trust, which can lead to increased
+                    investment and business opportunities.
                   </p>
                 </div>
-                <div className="p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
-                  <h1 className="text-xl font-bold">No Business Name Limits</h1>
+                <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
+                  <h1 className="text-xl font-bold">Minimum Requirements</h1>
                   <p className="mt-3">
-                    No restrictions on business names, but entrepreneurs are
-                    encouraged to choose original names and register trademarks.
+                    A public limited company must have at least seven
+                    shareholders, and there is no maximum limit on the number of
+                    shareholders. Additionally, it must have a minimum of three
+                    directors, with at least one director being a resident of
+                    India.
                   </p>
                 </div>
               </div>
@@ -274,44 +310,6 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="relative scroll-mt-20 flex-none mx-auto xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm px-4 lg:px-10  my-5 md:my-0 lg:my-16 mb-10">
-        <div className="flex flex-col w-full gap-4 lg:flex-row">
-          {/* Text Section */}
-          <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              COMPARISON
-            </p>
-
-            <h2 className="text-[#2a2a2a]  dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Comparison
-              <span className="text-[#3B82F6]"> Compliances </span>
-            </h2>
-            <div className="font-medium text-gray-600 dark:text-gray-400">
-              <p className="text-sm lg:text-base">
-                A sole proprietorship only needs to file an income tax return
-                once a year. Accounts for proprietorships need to be audited if
-                their annual revenue exceeds RS 5 crore.
-              </p>
-              <p className="text-sm lg:text-base mt-3 text-center">
-                <strong>
-                  COMPARISON WITH OTHER FORMATS TO CHOOSE THE BEST SUITABLE FOR
-                  YOUR BUSINESS
-                </strong>
-                <br />
-                <strong>
-                  LLP vs. Private Limited Company vs. Partnership Firm vs. OPC
-                  Company vs. Proprietorship Firm
-                </strong>
-              </p>
-            </div>
-            {/* <div className="mt-10">
-              <ComparisonTable />
-            </div> */}
-          </div>
-        </div>
-      </section>
-      <ComparisonTable index={6} />
-      <Faq />
     </div>
   );
 };
