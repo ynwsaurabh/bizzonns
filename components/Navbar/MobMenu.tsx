@@ -8,9 +8,23 @@ import Link from "next/link";
 const MobMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState<number | null>(null);
+  const [activeHeading, setActiveHeading] = useState<number | null>(null);
+
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
     setClicked(null);
+    setActiveHeading(null);
+  };
+
+  const handleParentClick = (index: number) => {
+    if (clicked === index) {
+      
+      setClicked(null);
+      setActiveHeading(null);
+    } else {
+      setClicked(index);
+      setActiveHeading(null); 
+    }
   };
 
   const subMenuDrawer = {
@@ -23,6 +37,7 @@ const MobMenu: React.FC = () => {
       overflow: "hidden",
     },
   };
+  
 
   return (
     <div>
@@ -36,42 +51,97 @@ const MobMenu: React.FC = () => {
         animate={{ x: isOpen ? "0%" : "-100%" }}
       >
         <ul>
-          {Menus.map(({ name, subMenu }, i) => {
+          {Menus.map(({ name, subMenu = [], subMenuHeading = [] }, i) => {
             const isClicked = clicked === i;
-            const hasSubMenu = subMenu?.length;
+            const hasSubMenu = subMenu.length > 0;
+            const hasHeadings = subMenuHeading.length > 0;
+
             return (
-              <li key={name} className="">
+              <li key={name}>
                 <span
                   className="flex items-center justify-between p-4 hover:bg-gray-300 dark:hover:bg-white/5 rounded-md cursor-pointer relative"
-                  onClick={() => setClicked(isClicked ? null : i)}
+                  onClick={() => handleParentClick(i)}
                 >
                   {name}
                   {hasSubMenu && (
                     <ChevronDown
-                      className={`ml-auto ${isClicked && "rotate-180"} `}
+                      className={`ml-auto ${isClicked && "rotate-180"}`}
                     />
                   )}
                 </span>
-                {hasSubMenu && (
-                  <motion.ul
-                    initial="exit"
-                    animate={isClicked ? "enter" : "exit"}
-                    variants={subMenuDrawer}
-                    className="ml-5"
-                  >
-                    {subMenu.map(({ name, icon: Icon, href }) => (
-                      <Link href={href}>
-                        <li
-                          key={name}
-                          className="p-2 flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
-                          onClick={toggleDrawer}
-                        >
-                          <Icon size={17} />
-                          {name}
-                        </li>
-                      </Link>
-                    ))}
-                  </motion.ul>
+                {isClicked && hasSubMenu && (
+                  <div className="ml-5">
+                    {hasHeadings ? (
+                      subMenuHeading.map((heading, headingIndex) => (
+                        <div key={heading}>
+                          <span
+                            className="p-2 w-[17rem] flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer "
+                            onClick={() =>
+                              setActiveHeading(
+                                activeHeading === headingIndex
+                                  ? null
+                                  : headingIndex
+                              )
+                            }
+                          >
+                            {heading}
+                            <ChevronDown
+                              className={`ml-auto transition-transform ${
+                                activeHeading === headingIndex
+                                  ? "rotate-180"
+                                  : ""
+                              }`}
+                            />
+                          </span>
+                          <motion.ul
+                            initial="exit"
+                            animate={
+                              activeHeading === headingIndex ? "enter" : "exit"
+                            }
+                            variants={subMenuDrawer}
+                            className="ml-5 w-[15.5rem]"
+                          >
+                            {subMenu
+                              .filter(
+                                (_, index) =>
+                                  index % subMenuHeading.length === headingIndex
+                              )
+                              .map(({ name, icon: Icon, href }) => (
+                                <Link key={name} href={href}>
+                                  <li
+                                    className="p-2 flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                                    onClick={toggleDrawer}
+                                  >
+                                    <Icon size={17} />
+                                    {name}
+                                  </li>
+                                </Link>
+                              ))}
+                          </motion.ul>
+                        </div>
+                      ))
+                    ) : (
+                      // Render subMenu directly if no subMenuHeading
+                      <motion.ul
+                        initial="exit"
+                        animate="enter"
+                        variants={subMenuDrawer}
+                        className="ml-5"
+                      >
+                        {subMenu.map(({ name, icon: Icon, href }) => (
+                          <Link key={name} href={href}>
+                            <li
+                              className="p-2 flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                              onClick={toggleDrawer}
+                            >
+                              <Icon size={17} />
+                              {name}
+                            </li>
+                          </Link>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </div>
                 )}
               </li>
             );
@@ -81,4 +151,5 @@ const MobMenu: React.FC = () => {
     </div>
   );
 };
+
 export default MobMenu;
