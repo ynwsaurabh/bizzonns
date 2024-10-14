@@ -30,7 +30,7 @@ const BusinessStats: React.FC = () => {
       <div className="font-inter " data-aos="fade-right">
         <h1 className="text-gray-900 dark:text-white font-semibold text-[27px] lg:text-[40px]">
           Helping a local&nbsp; <br />
-          <span className="text-blue-500">business reinvent itself</span>
+          <span className="text-[#fd8115]">business reinvent itself</span>
         </h1>
         <p className="text-gray-700 dark:text-white text-[16px] font-normal">
           We reached here with our hard work and dedication.

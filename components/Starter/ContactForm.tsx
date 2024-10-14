@@ -1,32 +1,37 @@
-'use client'
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    countryCode: '+91',
-    phoneNumber: '',
-    service: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    countryCode: "+91",
+    phoneNumber: "",
+    service: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
-    if (!formData.firstName) newErrors.firstName = 'First name is required';
-    if (!formData.lastName) newErrors.lastName = 'Last name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.phoneNumber) newErrors.phoneNumber = 'Phone number is required';
-    if (!formData.service) newErrors.service = 'Service selection is required';
-    if (!formData.message) newErrors.message = 'Message is required';
+    if (!formData.firstName) newErrors.firstName = "First name is required";
+    if (!formData.lastName) newErrors.lastName = "Last name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.phoneNumber)
+      newErrors.phoneNumber = "Phone number is required";
+    if (!formData.service) newErrors.service = "Service selection is required";
+    if (!formData.message) newErrors.message = "Message is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -38,13 +43,13 @@ const ContactForm: React.FC = () => {
       console.log(formData);
       // Reset form or show success message if needed
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        countryCode: '+91',
-        phoneNumber: '',
-        service: '',
-        message: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        countryCode: "+91",
+        phoneNumber: "",
+        service: "",
+        message: "",
       });
       setErrors({});
     }
@@ -64,18 +69,26 @@ const ContactForm: React.FC = () => {
               placeholder="First name"
               value={formData.firstName}
               onChange={handleChange}
-              className={`w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.firstName ? 'border-red-500' : ''}`}
+              className={`w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+                errors.firstName ? "border-red-500" : ""
+              }`}
             />
-            {errors.firstName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
+            {errors.firstName && (
+              <span className="text-red-500 text-sm">{errors.firstName}</span>
+            )}
             <input
               type="text"
               name="lastName"
               placeholder="Last name"
               value={formData.lastName}
               onChange={handleChange}
-              className={`w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.lastName ? 'border-red-500' : ''}`}
+              className={`w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+                errors.lastName ? "border-red-500" : ""
+              }`}
             />
-            {errors.lastName && <span className="text-red-500 text-sm">{errors.lastName}</span>}
+            {errors.lastName && (
+              <span className="text-red-500 text-sm">{errors.lastName}</span>
+            )}
           </div>
 
           <input
@@ -84,9 +97,13 @@ const ContactForm: React.FC = () => {
             placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.email ? 'border-red-500' : ''}`}
+            className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+              errors.email ? "border-red-500" : ""
+            }`}
           />
-          {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
+          {errors.email && (
+            <span className="text-red-500 text-sm">{errors.email}</span>
+          )}
 
           <div className="flex space-x-2">
             <select
@@ -94,11 +111,15 @@ const ContactForm: React.FC = () => {
               value={formData.countryCode}
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-              style={{ backgroundColor: 'white', color: 'black' }}
+              style={{ backgroundColor: "white", color: "black" }}
             >
-              <option value="+91">+91</option>
-              <option value="+62">+62</option>
-              <option value="+44">+44</option>
+              <option value="+91">India (+91)</option>
+              <option value="+1">USA (+1)</option>
+              <option value="+44">UK (+44)</option>
+              <option value="+61">Australia (+61)</option>
+              <option value="+81">Japan (+81)</option>
+              <option value="+49">Germany (+49)</option>
+              <option value="+33">France (+33)</option>
             </select>
             <input
               type="tel"
@@ -106,25 +127,36 @@ const ContactForm: React.FC = () => {
               placeholder="Phone number"
               value={formData.phoneNumber}
               onChange={handleChange}
-              className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.phoneNumber ? 'border-red-500' : ''}`}
+              className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+                errors.phoneNumber ? "border-red-500" : ""
+              }`}
             />
           </div>
-          {errors.phoneNumber && <span className="text-red-500 text-sm">{errors.phoneNumber}</span>}
+          {errors.phoneNumber && (
+            <span className="text-red-500 text-sm">{errors.phoneNumber}</span>
+          )}
 
           <div className="mb-4">
             <select
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.service ? 'border-red-500' : ''}`}
-              style={{ backgroundColor: 'white', color: 'black' }}
+              className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+                errors.service ? "border-red-500" : ""
+              }`}
+              style={{ backgroundColor: "white", color: "black" }}
             >
               <option value="">Select a service</option>
-              <option value="service1">Service 1</option>
-              <option value="service2">Service 2</option>
-              <option value="service3">Service 3</option>
+              <option value="startup">Startup</option>
+              <option value="Intellectual Property">Intellectual Property</option>
+              <option value="Audits">Audits</option>
+              <option value="Tax">Tax</option>
+              <option value="Compliances">Compliances</option>
+              <option value="License">License</option>
             </select>
-            {errors.service && <span className="text-red-500 text-sm">{errors.service}</span>}
+            {errors.service && (
+              <span className="text-red-500 text-sm">{errors.service}</span>
+            )}
           </div>
 
           <textarea
@@ -132,16 +164,20 @@ const ContactForm: React.FC = () => {
             placeholder="How can we help?"
             value={formData.message}
             onChange={handleChange}
-            className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${errors.message ? 'border-red-500' : ''}`}
+            className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
+              errors.message ? "border-red-500" : ""
+            }`}
             maxLength={120}
             rows={4}
           ></textarea>
-          {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
+          {errors.message && (
+            <span className="text-red-500 text-sm">{errors.message}</span>
+          )}
         </div>
 
         <button
           type="submit"
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+          className="w-full py-3 bg-[#fd8115] text-white rounded-lg hover:bg-[#e96d00] transition font-semibold"
         >
           Submit
         </button>

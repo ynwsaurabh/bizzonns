@@ -244,7 +244,7 @@ const page = () => {
               Overview
             </p>
 
-            <h2 className="text-[#3B82F6] font-poppins text-3xl lg:text-4xl font-semibold">
+            <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -286,7 +286,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Required Documents For
-              <span className="text-[#3B82F6]"> Subsidiary Company </span>
+              <span className="text-[#fd8115]"> Subsidiary Company </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
               <div className="p-5  ">
@@ -412,7 +412,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
-              <span className="text-[#3B82F6]"> Subsidiary Company </span>
+              <span className="text-[#fd8115]"> Subsidiary Company </span>
             </h2>
           </div>
         </div>
@@ -495,7 +495,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
             Compliances For
-              <span className="text-[#3B82F6]"> Subsidiary Company </span>
+              <span className="text-[#fd8115]"> Subsidiary Company </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
               <div className="p-5  ">

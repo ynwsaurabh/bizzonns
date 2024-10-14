@@ -45,7 +45,7 @@ const About = () => {
               Services are all part of our methodology.
             </p>
             <Link href="/about">
-              <div className="relative slidein900 cursor-pointer my-4 flex space-x-2 dark:text-[#000] hover:bg-gray-600 hover:text-[#fff] dark:hover:bg-[#000] dark:hover:text-white text-white items-center z-10 rounded-full bg-[rgb(0,0,0)] dark:bg-white py-2 px-4 ring-1 ring-white/10 inline-flex">
+              <div className="relative slidein900 cursor-pointer my-4 space-x-2 dark:text-[#000] hover:bg-gray-600 hover:text-[#fff] dark:hover:bg-[#000] dark:hover:text-white text-white items-center z-10 rounded-full bg-[rgb(0,0,0)] dark:bg-white py-2 px-4 ring-1 ring-white/10 inline-flex">
                 <span>Explore more</span>
                 <svg
                   width="16"

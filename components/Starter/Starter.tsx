@@ -10,7 +10,7 @@ interface Item {
 interface CompanyRegistrationProps {
   title: string;
   href: string;
-  descriptions: string[];
+  descriptions?: string[];
   parent: string;
 }
 
@@ -51,11 +51,11 @@ const CompanyRegistration: React.FC<CompanyRegistrationProps> = ({
               </div>
             </div>
           </div>
-          <h1 className=" text-[28px] md:text-[36px] font-bold text-black leading-[1.2] md:leading-[52px]">
+          <h1 className=" text-[28px] md:text-[36px] slidein500 font-bold text-black leading-[1.2] md:leading-[52px]">
             {title}
           </h1>
-          <ul className="flex flex-col gap-4 md:gap-3 max-md:py-5 noListMargin">
-            {descriptions.map((desc, index) => (
+          <ul className="flex flex-col gap-4 md:gap-3 slidein700 max-md:py-5 noListMargin">
+            {descriptions?.map((desc, index) => (
               <li
                 key={index}
                 className="flex items-start gap-[10px] md:text-[18px] text-[#606162]"

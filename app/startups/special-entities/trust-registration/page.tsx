@@ -33,7 +33,7 @@ const page = () => {
     <div className="bg-white dark:bg-gray-900">
       <div className="mt-16 bg-[#F5FAFF]">
         <CompanyRegistration
-          title="Section 8 Company"
+          title="Trust Formation"
           parent="Startup"
           href="/"
           descriptions={descriptions}
@@ -47,7 +47,7 @@ const page = () => {
               Overview
             </p>
 
-            <h2 className="text-[#3B82F6] font-poppins text-3xl lg:text-4xl font-semibold">
+            <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -114,7 +114,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
-              <span className="text-[#3B82F6]"> {""}Trust Formation </span>
+              <span className="text-[#fd8115]"> {""}Trust Formation </span>
             </h2>
           </div>
         </div>
@@ -211,7 +211,7 @@ const page = () => {
             Trust Deed
             </p>
 
-            <h2 className="text-[#3B82F6] font-poppins text-3xl lg:text-4xl font-semibold">
+            <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
             Trust Deed
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -246,7 +246,7 @@ const page = () => {
 
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
             Advantages of
-              <span className="text-[#3B82F6]"> {""}Trust Formation </span>
+              <span className="text-[#fd8115]"> {""}Trust Formation </span>
             </h2>
           </div>
         </div>

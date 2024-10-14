@@ -105,24 +105,24 @@ export const Menus = [
     subMenu: [
       {
         name: "Trade Mark",
-        href: "Center",
+        href: "/intellectual-property/trademark",
         icon: ChevronRight,
       },
       {
         name: "Copyright",
-        href: "Project help",
+        href: "/intellectual-property/copyright",
         icon: ChevronRight,
       },
       {
         name: "Design",
-        href: "Urgent issues",
+        href: "/intellectual-property/design",
         icon: ChevronRight,
       },
     ],
     gridCols: 1,
   },
   {
-    name: "AUDITS & TAX",
+    name: "Audits & Tax",
     subMenuHeading: ["AUDITS", "TAXATION", "MONTHLY RETURNS"],
     subMenu: [
       {
@@ -307,7 +307,7 @@ export const Menus = [
     subMenu: [
       {
         name: "Startup India Recognition",
-        href: "Browse templates",
+        href: "/license/registration/startup-india",
         icon: ChevronRight,
       },
       {
@@ -322,7 +322,7 @@ export const Menus = [
       },
       {
         name: "Udyam / MSME registration",
-        href: "Upcoming events",
+        href: "/license/registration/udyam-registration",
         icon: ChevronRight,
       },
       {
@@ -337,7 +337,7 @@ export const Menus = [
       },
       {
         name: "GST Registration",
-        href: "Changelog",
+        href: "/license/registration/gst-registration",
         icon: ChevronRight,
       },
       {
@@ -352,7 +352,7 @@ export const Menus = [
       },
       {
         name: "Import Export Code",
-        href: "Watch lessions",
+        href: "/license/registration/import-export-code-registration",
         icon: ChevronRight,
       },
       {
@@ -367,7 +367,7 @@ export const Menus = [
       },
       {
         name: "APEDA Registration",
-        href: "Posts",
+        href: "/license/registration/apeda-registration",
         icon: ChevronRight,
       },
       {
@@ -382,7 +382,7 @@ export const Menus = [
       },
       {
         name: "RNI registration",
-        href: "Plugin",
+        href: "/license/registration/rni-registration",
         icon: ChevronRight,
       },
       {

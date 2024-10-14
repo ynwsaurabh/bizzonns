@@ -141,7 +141,8 @@
 .prome-fljove {
     border-radius: 9999px;
     --un-bg-opacity: 1;
-    background-color: rgb(37 99 235 / var(--un-bg-opacity));
+    background-color: #fd8115;
+    /* background-color: rgb(37 99 235 / var(--un-bg-opacity)); */
     padding: .5rem 1rem;
     --un-text-opacity: 1;
     color: rgb(255 255 255 / var(--un-text-opacity));
@@ -152,7 +153,8 @@
 
 .group:hover .prome-fljove {
     --un-bg-opacity: 1;
-    background-color: rgb(29 78 216 / var(--un-bg-opacity))
+    /* background-color: rgb(29 78 216 / var(--un-bg-opacity)) */
+    background-color: #fd8115;
 }
 
 .prome-9gy3o3 {
@@ -186,10 +188,12 @@
     justify-content: center;
     border-width: 2px;
     --un-border-opacity: 1;
-    border-color: rgb(147 197 253 / var(--un-border-opacity));
+    /* border-color: rgb(147 197 253 / var(--un-border-opacity)); */
+    border-color: #f7b983;
     border-radius: 9999px;
     --un-bg-opacity: 1;
-    background-color: rgb(37 99 235 / var(--un-bg-opacity));
+    /* background-color: rgb(37 99 235 / var(--un-bg-opacity)); */
+    background-color: #fd8115;
     padding: 1rem
 }
 
@@ -201,7 +205,8 @@
     justify-content: center;
     border-width: 1px;
     --un-border-opacity: 1;
-    border-color: rgb(96 165 250 / var(--un-border-opacity));
+    /* border-color: rgb(96 165 250 / var(--un-border-opacity)); */
+    border-color: #f7b983;
     border-radius: 9999px
 }
 

@@ -75,7 +75,7 @@ const MobMenu: React.FC = () => {
                       subMenuHeading.map((heading, headingIndex) => (
                         <div key={heading}>
                           <span
-                            className="p-2 w-[17rem] flex items-center hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer "
+                            className="p-2 w-[17rem] flex items-center capitalize hover:bg-gray-300 dark:hover:bg-white/5 rounded-md gap-x-2 cursor-pointer "
                             onClick={() =>
                               setActiveHeading(
                                 activeHeading === headingIndex

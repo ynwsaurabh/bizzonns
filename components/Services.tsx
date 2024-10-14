@@ -14,42 +14,42 @@ interface Product {
 
 const products: Product[] = [
   {
-    href: "/products/maize",
+    href: "/",
     title: "Private Limited Company",
     image: "/plc.png",
     description:
       "Private Limited is the most common company structure for new ventures. The formation of a Private Limited Corporate entity is a smooth process with limited set of documentation and several advantages.",
   },
   {
-    href: "/products/mustard",
+    href: "/",
     title: "Limited Liability Partnership",
     image: "/llp.png",
     description:
       "A limited liability partnership firm is a straightforward business form founded on mutual consent. The benefits of a partnership firm and a corporation are combined in an LLP.",
   },
   {
-    href: "/products/rice",
+    href: "/",
     title: "Trademark Registration",
     image: "/tm.png",
     description:
       "It is critical to pursue Trademark Registration in order to identify and protect your product or service, as well as your hard-earned brand, from competitors in the market.",
   },
   {
-    href: "/products/wheat",
+    href: "/",
     title: "PSARA License",
     image: "/psara.png",
     description:
       "For Starting a Security Business in India, it is mandatory to obtain a PSARA License from Home Department. We provide PAN India Service with easy documentation drafting and online submission.",
   },
   {
-    href: "/products/pulses",
+    href: "/",
     title: "DRUG License",
     image: "/drug.png",
     description:
       "Anyone who wants to get into Medical Business needs to get a DRUG License from the respective State Government. We provide PAN India Service with application drafting and online submission.",
   },
   {
-    href: "/products/dryfruits",
+    href: "/",
     title: "Startup India",
     image: "/startup.png",
     description:
