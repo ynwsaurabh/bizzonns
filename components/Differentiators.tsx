@@ -68,7 +68,7 @@ const Differentiators: FC = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 bg-white dark:bg-gray-900 overflow-hidden">
+    <div className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 overflow-hidden">
       <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
         Differentiators
       </span>

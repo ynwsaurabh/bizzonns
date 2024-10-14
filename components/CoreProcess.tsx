@@ -177,7 +177,7 @@ const CoreProcess: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[rgb(243 244 246)] bg-opacity-100 dark:bg-gray-900 dark:bg-opacity-100 text-black dark:text-white text-opacity-100 p-6">
+    <div className=" text-black dark:text-white text-opacity-100 p-6">
       <div className="prome-j59otj my-24 ">
         <div className="prome-dhhden">
           <h2 className="prome-vnfh11">Our Core Process</h2>

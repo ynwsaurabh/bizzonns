@@ -63,7 +63,7 @@ const Services: FC = () => {
   return (
     <div
       id="products"
-      className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 bg-white dark:bg-gray-900 overflow-hidden"
+      className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 overflow-hidden"
     >
       <div className="mt-4 text-xs z-40 w-fit bg-white dark:bg-gray-800 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
         <span>Expert Services</span>

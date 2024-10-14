@@ -11,7 +11,7 @@ const About = () => {
     });
   }),[]
   return (
-    <div id="aboutus" className="w-full h-full overflow-hidden  bg-white dark:bg-black">
+    <div id="aboutus" className="w-full h-full overflow-hidden  ">
       <div className="max-w-7xl md:max-w-[85%] mx-auto antialiased py-4 md:py-8 px-8 ">
         <div className="mt-4 text-xs z-10 w-fit bg-white dark:bg-gray-900 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
           <span>#1 CONSULTING COMPANY</span>
@@ -21,7 +21,7 @@ const About = () => {
           About Us
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center md:h-auto dark:bg-black bg-white relative max-w-7xl md:max-w-[85%] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center md:h-auto relative max-w-7xl md:max-w-[85%] mx-auto">
         {/* Text Section */}
         <div className="flex-1 max-w-7xl mt-5 mx-auto px-4 md:px-8 relative">
           <div className="text-left" data-aos="fade-right">

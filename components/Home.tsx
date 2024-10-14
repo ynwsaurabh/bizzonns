@@ -25,7 +25,7 @@ const Home = () => {
             repeat={Infinity} // Loop the animation
           /> is just one-step away
           </p>
-          <p className="text-lg lg:text-xl p-3 text-white">
+          <p className="text-lg lg:text-xl p-3">
             Get Regulatory Assistance to Audit, Advisory, Taxation and also
             Expert Consultation to transform your business. Accelerate your
             start-up business or established enterprise with a technology driven
