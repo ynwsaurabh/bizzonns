@@ -70,10 +70,10 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <div data-aos="fade-left" className="relative flex-1 px-7 flex items-center justify-center lg:mb-0 lg:w-1/2 bg-[url('/about.gif')] bg-cover bg-center ">
+        <div data-aos="fade-left" className="relative flex-1 px-7 flex items-center justify-center lg:mb-0 lg:w-1/2 ">
           <img
             className="object-contain object-center transition-opacity duration-300 block w-full lg:w-3/4"
-            srcSet="/about1.png"
+            srcSet="/about.png"
             sizes="(min-width: 1024px) 50%, 80%"
             width="855"
             height="698"

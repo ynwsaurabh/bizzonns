@@ -178,7 +178,7 @@ const CoreProcess: React.FC = () => {
 
   return (
     <div className=" text-black dark:text-white text-opacity-100 p-6">
-      <div className="prome-j59otj my-24 ">
+      <div className="prome-j59otj md:my-24 ">
         <div className="prome-dhhden">
           <h2 className="prome-vnfh11">Our Core Process</h2>
           <a href="/about" className="prome-95p069 group">
@@ -199,7 +199,9 @@ const CoreProcess: React.FC = () => {
           className="prome-9gy3o3 middle"
           ref={scrollListRef}
         >
-          {processItems.map(({ key, title, description, icon }) => (
+          <img src="/process.jpg" />
+
+          {/* {processItems.map(({ key, title, description, icon }) => (
             <div
               key={key}
               data-key={key}
@@ -216,7 +218,7 @@ const CoreProcess: React.FC = () => {
                 <p className="prome-otd43m">{description}</p>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
