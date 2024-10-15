@@ -11,7 +11,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='bg-white dark:bg-gray-900'>
+    <div className='bg-[#F2F0EF] dark:bg-gray-900'>
       <Home />
       <About />
       <Services />
