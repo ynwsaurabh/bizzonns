@@ -49,7 +49,7 @@ export const Menus = [
       },
       {
         name: "Nidhi Company",
-        href: "/startups/special-entities/",
+        href: "/startups/special-entities/nidhi-company",
         icon: ChevronRight,
       },
       {
@@ -327,7 +327,7 @@ export const Menus = [
       },
       {
         name: "Drug License",
-        href: "Images",
+        href: "/license/industrial-license/drug-license",
         icon: ChevronRight,
       },
       {
@@ -342,7 +342,7 @@ export const Menus = [
       },
       {
         name: "Food License",
-        href: "Images",
+        href: "/license/industrial-license/food-license",
         icon: ChevronRight,
       },
       {
@@ -372,7 +372,7 @@ export const Menus = [
       },
       {
         name: "CDSCO licenses",
-        href: "Images",
+        href: "/license/industrial-license/cdsco",
         icon: ChevronRight,
       },
       {
