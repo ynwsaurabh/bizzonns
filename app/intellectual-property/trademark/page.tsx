@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Trademark'
+}
 const descriptions = [
   "Register your Trademark & protect your brands, logos, business names, labels, product or service names and domains swiftly with our expert online trademark registration services in India. ",
   "Our senior IP lawyer conducts thorough trademark searches before ™ application.",

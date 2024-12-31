@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Design'
+}
 const page = () => {
   return (
-    <div>
+    <div className='h-screen'>
       
     </div>
   )

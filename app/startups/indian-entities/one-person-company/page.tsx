@@ -2,8 +2,11 @@ import Faq from "@/components/Faq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
-import Testimonials from "@/components/Testimonials";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'One Person Company'
+}
 const descriptions = [
   "This is suitable for an entrepreneur who wants to start a business alone.",
   "This is suitable for an entrepreneur who wants to start a business alone. It is a New Concept introduced in the Companies Act 2013. Our Team of Professionals assists you in getting the One Person’s Company Registration.",

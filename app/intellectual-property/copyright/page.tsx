@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Copyright'
+}
 const descriptions = [
   "Start using © symbol with our Guaranteed 5-7 Days Filing T&C*.",
   "Transparent process through follow-up and regular updates. Filing your copyright starts from ₹2999 + Govt fees ",

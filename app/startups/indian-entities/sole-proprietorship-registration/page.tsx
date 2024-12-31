@@ -2,6 +2,10 @@ import Faq from "@/components/Faq";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Sole Proprietorship Registration'
+}
 const descriptions = [
   "Suitable for a Single person who wants to start a business with the Zero or Minimum Fund.",
   "Bizzonns helps you in selecting the Best Suitable Format for your business by understanding your requirements and needs. It also helps you in getting your Business registered and operational.",

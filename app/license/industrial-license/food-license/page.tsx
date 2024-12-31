@@ -3,7 +3,10 @@ import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Food License'
+}
 const descriptions = [
   "It is applicable to all business into trading, manufacturing and Packaging of Food products",
   "Bizzonns have experience of providing service for Food license in most of the States of India like Maharashtra, Karnataka and Delhi. ",

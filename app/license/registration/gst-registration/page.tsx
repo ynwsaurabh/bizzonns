@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'GST Registration'
+}
 const faqs = [
   {
     question: "What is GST registration? ",

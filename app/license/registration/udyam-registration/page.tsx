@@ -2,9 +2,11 @@ import Faq from "@/components/Faq";
 import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
-import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'UDYAM Registration'
+}
 const descriptions = [
   "The MSME sector includes micro, small, and medium-sized enterprises. The classification is based on investment in plant and machinery or equipment and turnover of the enterprises.",
   "A micro enterprise, where the investment in plant and machinery or equipment does not exceed one crore rupees and turnover does not exceed five crore rupees;",

@@ -1,6 +1,10 @@
 import CustomFaq from "@/components/Faq/CustomFaq";
 import CompanyRegistration from "@/components/Starter/Starter";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Trust Registration'
+}
 const descriptions = [
   "Our Team at Bizzonns helps you in the documentation and end-to-end process of getting a Trust Incorporated.",
   "They also guide you with the After Formation Process of the Trust.",

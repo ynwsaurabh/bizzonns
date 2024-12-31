@@ -4,6 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Subsidiary Company'
+}
 const descriptions = [
   "Forming a subsidiary foreign company in India involves establishing a separate legal entity that is controlled by a foreign parent company. This legal structure allows the parent company to conduct business operations and expand its presence in the Indian market.",
   "Professional Charges start at Rs 35,999/- Onwards",

@@ -2,8 +2,11 @@ import Faq from "@/components/Faq";
 import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
-import ComparisonTable from "@/components/Table";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Section 8 Company'
+}
 const descriptions = [
   "Applicable for NGOs, and Non-Profit Organizations who want to form a Company, with a Social objective and, not intending to generate Profits.",
   "Our Team at Bizzonns helps you in the documentation and end-to-end process of getting a Section 8 Company Incorporated and License from the ROC. They also guide you with the After Formation Process of the Company.",

@@ -1,7 +1,10 @@
 import Faq from "@/components/Faq";
 import CompanyRegistration from "@/components/Starter/Starter";
-import ComparisonTable from "@/components/Table";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Public Limited Company'
+}
 const descriptions = [
   "A public limited company is a publicly traded entity that offers its shares to the public through a stock exchange or over-the-counter market.",
   "Professional Charges start at Rs 9,999/- Onwards",

@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'NIDHI Company'
+}
 const descriptions = ["Starting at Rs 24,999 Onwards", "(Takes 15-20 Days)"];
 
 const processItems = [

@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'CDSCO'
+}
 const descriptions = [
   "Business dealing into manufacture and import & export of medical equipment, Pharmaceuticals and cosmetics should take necessary License from CDSCO before starting the operation.",
   "Bizzonns can help you in getting the CDSCO License with minimum Charges",

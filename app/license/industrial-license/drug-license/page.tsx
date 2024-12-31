@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Drug License'
+}
 const descriptions = [
   "It is applicable to drug or pharmaceuticals trading, manufacturing and distribution business. Bizzonns have experience of providing service for drug license in most of the States of India like Maharashtra, Karnataka and Delhi. ",
   "Drug license is valid for 5 years of tenure and need to renewed before 60 days of expiry.",

@@ -2,8 +2,11 @@ import Faq from "@/components/Faq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
-import Testimonials from "@/components/Testimonials";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Private Limited Company'
+}
 const descriptions = [
   "This is the most suitable for startups looking for Investor Funding and Growing Businesses.",
   "Our Team at Bizzonns consists of qualified and vast experienced personnel, who after attending to your requirements, will recommend you the best suitable form for your business.",

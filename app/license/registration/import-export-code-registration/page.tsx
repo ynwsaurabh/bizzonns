@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'IEC Registration'
+}
 const descriptions = [
   "Import Export Code Registration is essential to carry out any Import and Export activities in India",
   "Our Team at Bizzonns helps you in the documentation and end-to-end process of getting an IEC Registration.",

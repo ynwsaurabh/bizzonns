@@ -1,6 +1,46 @@
+'use client'
+import emailjs from 'emailjs-com';
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs.send('bizzonns', 'template_bizzonns', formData, 'jcCp8NB9CnI7vFdF5')
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        toast.success('Message sent successfully!');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        toast.error('Failed to send message. Please try again.');
+      });
+  };
   return (
     <section id="contact" className="relative py-20 md:py-[120px]">
+      <Toaster />
       <div className="absolute left-0 top-0 -z-[1] h-full w-full bg-white dark:bg-dark"></div>
       <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full !bg-[#E9F9FF] dark:!bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
       <div className="container px-4">
@@ -69,69 +109,65 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <div
-              className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
-              data-wow-delay=".2s
-              "
-            >
+            <div className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]" data-wow-delay=".2s">
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Send us a Message
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-[22px]">
-                  <label
-                    htmlFor="fullName"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
+                  <label htmlFor="fullName" className="mb-4 block text-sm text-body-color dark:text-dark-6">
                     Full Name*
                   </label>
                   <input
                     type="text"
                     name="fullName"
                     placeholder="Adam Gelius"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[22px]">
-                  <label
-                    htmlFor="email"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
+                  <label htmlFor="email" className="mb-4 block text-sm text-body-color dark:text-dark-6">
                     Email*
                   </label>
                   <input
                     type="email"
                     name="email"
                     placeholder="example@yourmail.com"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[22px]">
-                  <label
-                    htmlFor="phone"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
+                  <label htmlFor="phone" className="mb-4 block text-sm text-body-color dark:text-dark-6">
                     Phone*
                   </label>
                   <input
                     type="text"
                     name="phone"
                     placeholder="+885 1254 5211 552"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[30px]">
-                  <label
-                    htmlFor="message"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
+                  <label htmlFor="message" className="mb-4 block text-sm text-body-color dark:text-dark-6">
                     Message*
                   </label>
                   <textarea
                     name="message"
                     rows={1}
                     placeholder="type your message here"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   ></textarea>
                 </div>
                 <div className="mb-0">

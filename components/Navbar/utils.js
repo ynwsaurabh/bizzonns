@@ -127,17 +127,17 @@ export const Menus = [
     subMenu: [
       {
         name: "Tax Audit",
-        href: "Browse templates",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Income Tax Return",
-        href: "Jobs",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "PF Returns",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -147,42 +147,42 @@ export const Menus = [
       },
       {
         name: "Form 15CA/CB",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "ESIC Returns",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Statutory Audit",
-        href: "Changelog",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "80G, 12AA, FCRA",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "PT Returns",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "LLP Audit",
-        href: "Watch lessions",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Startup Tax Exemption (80 IAC)",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "GST Returns",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -192,12 +192,12 @@ export const Menus = [
       },
       {
         name: "Assessments / Notices",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "TDS/TCS Return",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },      
     ],
@@ -209,17 +209,17 @@ export const Menus = [
     subMenu: [
       {
         name: "Private Limited Compliances",
-        href: "Browse templates",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Private Limited Company Closure",
-        href: "Jobs",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Share Transfer",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -229,42 +229,42 @@ export const Menus = [
       },
       {
         name: "LLP Closure",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Increase in Authorized Capital",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Section 8 compliances",
-        href: "Changelog",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Conversion of Private Limited to Public Ltd",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Change in Registered Office",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Nidhi Company Compliances",
-        href: "Watch lessions",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Conversion of Private Limited to LLP",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Creation of Charge by Company",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -274,12 +274,12 @@ export const Menus = [
       },
       {
         name: "Conversion of OPC to a Private Limited Company",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Director/Partner change",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -289,12 +289,12 @@ export const Menus = [
       },
       {
         name: "Conversion of LLP to Private Limited",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Company Name & Object Change",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       
@@ -312,12 +312,12 @@ export const Menus = [
       },
       {
         name: "PSARA License",
-        href: "Jobs",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Provident fund (PF)",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -332,7 +332,7 @@ export const Menus = [
       },
       {
         name: "Employee State Insurance (ESIC)",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -347,7 +347,7 @@ export const Menus = [
       },
       {
         name: "Professional tax",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -357,12 +357,12 @@ export const Menus = [
       },
       {
         name: "Pollution Control Board License",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Contract labour license",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -377,7 +377,7 @@ export const Menus = [
       },
       {
         name: "Labour Welfare Fund",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
@@ -387,12 +387,12 @@ export const Menus = [
       },
       {
         name: "Cosmetic License",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       {
         name: "Municipal license",
-        href: "Images",
+        href: "/",
         icon: ChevronRight,
       },
       

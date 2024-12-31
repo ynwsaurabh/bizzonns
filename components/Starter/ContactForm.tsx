@@ -1,62 +1,86 @@
 "use client";
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    countryCode: "+91",
-    phoneNumber: "",
-    service: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    countryCode: '+91',
+    phoneNumber: '',
+    services: '',
+    message: '',
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
+  // Handle input changes and update form data
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Validate the form fields
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     if (!formData.firstName) newErrors.firstName = "First name is required";
     if (!formData.lastName) newErrors.lastName = "Last name is required";
     if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.phoneNumber)
-      newErrors.phoneNumber = "Phone number is required";
-    if (!formData.service) newErrors.service = "Service selection is required";
+    if (!formData.phoneNumber) newErrors.phoneNumber = "Phone number is required";
+    if (!formData.services) newErrors.services = "Service selection is required";
     if (!formData.message) newErrors.message = "Message is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  // Handle form submission and send data to EmailJS
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (validate()) {
-      // Handle form submission logic
-      console.log(formData);
-      // Reset form or show success message if needed
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        countryCode: "+91",
-        phoneNumber: "",
-        service: "",
-        message: "",
-      });
-      setErrors({});
+      // Prepare formData to send to EmailJS
+      const formDataToSend = {
+        fullName: `${formData.firstName} ${formData.lastName}`,  // Combine first and last name
+        email: formData.email,
+        phone: `${formData.countryCode} ${formData.phoneNumber}`, // Combine countryCode and phoneNumber
+        services: formData.services,
+        message: formData.message,
+      };
+
+      // Send form data to EmailJS
+      emailjs
+        .send("bizzonns", "template_bizzonns", formDataToSend, "jcCp8NB9CnI7vFdF5")
+        .then(
+          (response) => {
+            console.log("Email sent successfully:", response);
+            toast.success("Message sent successfully!");
+            // Reset form after successful submission
+            setFormData({
+              firstName: '',
+              lastName: '',
+              email: '',
+              countryCode: '+91',
+              phoneNumber: '',
+              services: '',
+              message: '',
+            });
+            setErrors({});
+          },
+          (error) => {
+            console.error("Error sending email:", error);
+            toast.error("Failed to send message. Please try again.");
+          }
+        );
     }
   };
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-auto lg:mx-0">
+      <Toaster />
       <h2 className="text-2xl font-semibold text-black mb-4">Get in Touch</h2>
       <p className="text-sm text-gray-600 mb-6">You can reach us anytime</p>
 
@@ -138,11 +162,11 @@ const ContactForm: React.FC = () => {
 
           <div className="mb-4">
             <select
-              name="service"
-              value={formData.service}
+              name="services"
+              value={formData.services}
               onChange={handleChange}
               className={`w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 ${
-                errors.service ? "border-red-500" : ""
+                errors.services ? "border-red-500" : ""
               }`}
               style={{ backgroundColor: "white", color: "black" }}
             >
@@ -154,8 +178,8 @@ const ContactForm: React.FC = () => {
               <option value="Compliances">Compliances</option>
               <option value="License">License</option>
             </select>
-            {errors.service && (
-              <span className="text-red-500 text-sm">{errors.service}</span>
+            {errors.services && (
+              <span className="text-red-500 text-sm">{errors.services}</span>
             )}
           </div>
 
@@ -181,17 +205,6 @@ const ContactForm: React.FC = () => {
         >
           Submit
         </button>
-
-        {/* <p className="text-xs text-center text-gray-500 mt-4">
-          By contacting us, you agree to our{' '}
-          <a href="#" className="text-blue-600">
-            Terms of service
-          </a>{' '}
-          and{' '}
-          <a href="#" className="text-blue-600">
-            Privacy Policy
-          </a>
-        </p> */}
       </form>
     </div>
   );

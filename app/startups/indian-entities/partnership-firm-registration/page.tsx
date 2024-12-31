@@ -2,8 +2,11 @@ import Faq from "@/components/Faq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
-import Testimonials from "@/components/Testimonials";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Partnership Firm Registration'
+}
 const descriptions = [
   "Ideal for Small Scale Business Size.",
   "Our Professional Team understands your requirements and assists you in selecting the Best Suitable Business Structure.",

@@ -4,7 +4,10 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'APEDA Registration'
+}
 const descriptions = [
   "APEDA registration is a mandatory process for any individual or organization involved in the export of scheduled agricultural commodities from India",
   "APEDA Registration is valid for a period of Five years. Once Expired, it needs to be renewed by submitting the necessary documents and paying renewal fees. "

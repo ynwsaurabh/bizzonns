@@ -2,8 +2,11 @@ import Faq from "@/components/Faq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
-import Testimonials from "@/components/Testimonials";
 import React from "react";
+import { Metadata } from "next";
+export const metadata:Metadata ={
+  title:'Limited Liability Company'
+}
 const descriptions = [
   "This is the Most Suitable Business Format for Small and Medium Sized Enterprises.",
   "Starting at Rs 3999/- Onwards",
