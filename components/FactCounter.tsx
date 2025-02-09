@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 
 const facts = [
   {
-    count: 1000,
+    count: 100,
     label: '100% Online, Easy & All India Services',
     indicator: '+',
   },

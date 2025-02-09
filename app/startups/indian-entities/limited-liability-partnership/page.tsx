@@ -1,4 +1,4 @@
-import Faq from "@/components/Faq";
+import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
@@ -7,6 +7,43 @@ import { Metadata } from "next";
 export const metadata:Metadata ={
   title:'Limited Liability Company'
 }
+const faqs = [
+  {
+    question: "How many Partners are required to incorporate an LLP?",
+    answer:
+      "To incorporate an LLP, minimum of 2 Partners are required and there is no upper limit on the number of members. The Partners of the LLP must be above age 18 and should have a valid address in India. At least one of the partners of the LLP must be a Resident Indian. Partners of the LLP can be Individuals or Body Corporates. ",
+  },
+  {
+    question: "What is LLP Agreement?",
+    answer:
+      "LLP Agreement is the written document that defines the rights, duties, and responsibilities of all the Partners towards each other and towards the business. It mentions the Business Activity which an LLP can carry on. It is a deed that gets signed by all the Partners of the LLP, and then the same gets stamped and notarized. ",
+  },
+  {
+    question: "Can a person with Foreign Nationality can become a partner?",
+    answer:
+      "An NRI can become a partner of an LLP, the only requirement is that he should possess the valid Designated Partner Identification Number (DPIN) issued by the Ministry of Corporate Affairs. But the LLP must have one Indian Resident Partner.",
+  },
+  {
+    question: "Is it possible to convert Partnership Firm into LLP?",
+    answer:
+      "By following the Provisions laid down in the LLP Act, 2016, an existing Partnership Firm can be easily converted into an LLP. One can convert their Partnership firm to LLP and can avail of all the benefits offered by an LLP to the business.",
+  },
+  {
+    question: "Can LLP raise Funds from the General Public?",
+    answer:
+      "As LLP is not a Public Company, thus it cannot raise money from the General Public. However, it can raise the funds from Private Investors like Angel Investors, Venture capitalists, Private Equity Firms, etc., as LLP is a Registered Format, unlike a Partnership firm and investors find it attractive to invest in such a business. ",
+  },
+  {
+    question: "Which is better, LLP or Partnership Firm?",
+    answer:
+      "As compared to Partnership Firm, LLP is a suitable format of business, as in this, the liability of the members is limited to the extent of their capital contribution, and the liability of the LLP doesn’t impact the Personal Property of the Partners. An LLP provides the advantages of both a Partnership Firm and a Company. ",
+  },
+  {
+    question: "What is the Annual Compliance Cost of running an LLP?",
+    answer:
+      "Running an LLP is pocket friendly, as the number of Annual Compliances is much less than, compared to the Private Limited Company. LLP doesn’t need to hold General Meetings, AGMs or Statutory Meetings, the cost of documentation and procedural requirement is less in the case of an LLP.",
+  },
+];
 const descriptions = [
   "This is the Most Suitable Business Format for Small and Medium Sized Enterprises.",
   "Starting at Rs 3999/- Onwards",
@@ -173,7 +210,7 @@ const processItems = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Limited Liability Partnership (LLP)"
           parent="Startup"
@@ -185,10 +222,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -218,10 +251,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
               <span className="text-[#fd8115]">
@@ -303,10 +332,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation For
               <span className="text-[#fd8115]">
@@ -420,12 +445,7 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              COMPARISON
-            </p>
-
             <h2 className="text-[#2a2a2a]  dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Comparison
               <span className="text-[#fd8115]"> Compliances </span>
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -448,7 +468,7 @@ const page = () => {
         </div>
       </section>
       <ComparisonTable index={5} />
-      <Faq />
+      <CustomFaq faqs={faqs} />
     </div>
   );
 };

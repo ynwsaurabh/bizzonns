@@ -5,9 +5,9 @@ import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'IEC Registration'
-}
+export const metadata: Metadata = {
+  title: "IEC Registration",
+};
 const descriptions = [
   "Import Export Code Registration is essential to carry out any Import and Export activities in India",
   "Our Team at Bizzonns helps you in the documentation and end-to-end process of getting an IEC Registration.",
@@ -17,8 +17,7 @@ const processItems = [
   {
     key: 0,
     title: "On the DGFT’s Portal, need to Register the entity",
-    description:
-      "",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +40,7 @@ const processItems = [
   {
     key: 1,
     title: "Once Registered, then IEC Application form needs to be filed",
-    description:
-      "",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +62,9 @@ const processItems = [
   },
   {
     key: 2,
-    title: "The Form need to be submitted with the relevant documents like Identity Proof, Address Proof, Cancelled Cheque Copy and Photo of the Applicant.",
-    description:
-      "",
+    title:
+      "The Form need to be submitted with the relevant documents like Identity Proof, Address Proof, Cancelled Cheque Copy and Photo of the Applicant.",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -92,9 +90,9 @@ const processItems = [
   },
   {
     key: 3,
-    title: "Once done, pay the requisite fees of the application and submit the Form.",
-    description:
-      "",
+    title:
+      "Once done, pay the requisite fees of the application and submit the Form.",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -117,8 +115,7 @@ const processItems = [
   {
     key: 4,
     title: "Once Submitted, an Application Number gets generated",
-    description:
-      "",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -141,9 +138,9 @@ const processItems = [
   },
   {
     key: 5,
-    title: "Usually, IEC Registration Certificate gets issued within 1-2 days itself in a digital format. The IEC is a 10 digit alphanumeric code, which is used for all export-import related transactions.",
-    description:
-      "",
+    title:
+      "Usually, IEC Registration Certificate gets issued within 1-2 days itself in a digital format. The IEC is a 10 digit alphanumeric code, which is used for all export-import related transactions.",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +181,8 @@ const faqs = [
       "Yes, any changes in the details of the IEC certificate, such as address or authorized personnel, should be updated with the DGFT.",
   },
   {
-    question: "Can I cancel my IEC if I no longer engage in import/export activities?",
+    question:
+      "Can I cancel my IEC if I no longer engage in import/export activities?",
     answer:
       "Yes, you can surrender your IEC by submitting an application for cancellation to the DGFT",
   },
@@ -199,7 +197,8 @@ const faqs = [
       "No, an IEC is specific to an individual or business entity and cannot be shared or used by someone else",
   },
   {
-    question: "Can I use my IEC for import/export of restricted or prohibited goods?",
+    question:
+      "Can I use my IEC for import/export of restricted or prohibited goods?",
     answer:
       "No, an IEC does not grant permission for the import/export of restricted or prohibited goods. Separate licenses or permissions may be required for such transactions.",
   },
@@ -208,7 +207,7 @@ const faqs = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Import Export Code Registration"
           parent="license"
@@ -220,10 +219,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -259,10 +254,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
               <span className="text-[#fd8115]"> IEC Registration </span>
@@ -279,14 +270,17 @@ const page = () => {
                     Enables international trade
                   </h1>
                   <p className="mt-3">
-                  IEC is mandatory for businesses engaging in import/export activities. 
+                    IEC is mandatory for businesses engaging in import/export
+                    activities.
                   </p>
                 </div>
                 <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
-                  <h1 className="text-[19px] font-bold">Avail export promotions and benefits </h1>
+                  <h1 className="text-[19px] font-bold">
+                    Avail export promotions and benefits{" "}
+                  </h1>
                   <p className="mt-3">
-                  Many government export promotion schemes require a valid
-                  IEC.
+                    Many government export promotion schemes require a valid
+                    IEC.
                   </p>
                 </div>
               </div>
@@ -295,14 +289,17 @@ const page = () => {
                 <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
                   <h1 className="text-xl font-bold">Expand business </h1>
                   <p className="mt-3">
-                  IEC opens doors to global markets and potential business partners.
+                    IEC opens doors to global markets and potential business
+                    partners.
                   </p>
                 </div>
                 <div className="flex flex-col h-full p-5 bg-white dark:bg-[#000] text-gray-900 dark:text-white shadow-xl rounded-2xl">
-                  <h1 className="text-xl font-bold">Enables registration with customs</h1>
+                  <h1 className="text-xl font-bold">
+                    Enables registration with customs
+                  </h1>
                   <p className="mt-3">
-                  IEC is required to clear customs for importing and exporting
-                  goods.
+                    IEC is required to clear customs for importing and exporting
+                    goods.
                   </p>
                 </div>
               </div>
@@ -328,10 +325,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation of
               <span className="text-[#fd8115]"> IEC Registration </span>
@@ -347,9 +340,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                    Proof of Identity
-                    </p>
+                    <p>Proof of Identity</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -359,9 +350,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                    Proof of Address
-                    </p>
+                    <p>Proof of Address</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -371,9 +360,27 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                    Cancelled Cheque Copy
-                    </p>
+                    <p>Cancelled Cheque Copy</p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>Business Entity Documents</p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>Copy of Partnership Deed (if applicable)</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
                     <img
@@ -384,31 +391,7 @@ const page = () => {
                       height="20"
                     />
                     <p>
-                    Business Entity Documents
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
-                    <img
-                      alt="blue tick"
-                      className="mt-[3px]"
-                      src="/blue-tick.svg"
-                      width="20"
-                      height="20"
-                    />
-                    <p>
-                    Copy of Partnership Deed (if applicable)
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
-                    <img
-                      alt="blue tick"
-                      className="mt-[3px]"
-                      src="/blue-tick.svg"
-                      width="20"
-                      height="20"
-                    />
-                    <p>
-                    Memorandum and Articles of Association (for Companies)
+                      Memorandum and Articles of Association (for Companies)
                     </p>
                   </li>
                 </ul>

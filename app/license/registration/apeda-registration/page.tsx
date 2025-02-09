@@ -5,12 +5,12 @@ import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'APEDA Registration'
-}
+export const metadata: Metadata = {
+  title: "APEDA Registration",
+};
 const descriptions = [
   "APEDA registration is a mandatory process for any individual or organization involved in the export of scheduled agricultural commodities from India",
-  "APEDA Registration is valid for a period of Five years. Once Expired, it needs to be renewed by submitting the necessary documents and paying renewal fees. "
+  "APEDA Registration is valid for a period of Five years. Once Expired, it needs to be renewed by submitting the necessary documents and paying renewal fees. ",
 ];
 
 const faqs = [
@@ -39,13 +39,12 @@ const faqs = [
     answer:
       "Yes, APEDA registration can be cancelled or revoked if the registered member fails to comply with the regulations or commits any violations as specified by APEDA.",
   },
-  
 ];
 
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="APEDA registration"
           parent="license"
@@ -57,10 +56,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -102,10 +97,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              BENEFITS
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
               <span className="text-[#fd8115]"> APEDA registration </span>
@@ -220,10 +211,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation of
               <span className="text-[#fd8115]">APEDA Registration</span>
@@ -239,9 +226,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                    Business Registration Documents such as COI/MOA/AOA
-                    </p>
+                    <p>Business Registration Documents such as COI/MOA/AOA</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -251,9 +236,7 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p>
-                    IEC (Import Export Code) Certificate
-                    </p>
+                    <p>IEC (Import Export Code) Certificate</p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -263,8 +246,38 @@ const page = () => {
                       width="20"
                       height="20"
                     />
+                    <p>Cancelled Cheque</p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>Product Information</p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>Office Address Proof</p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
                     <p>
-                    Cancelled Cheque
+                      Identity and Address Proof of Authorized Representative
                     </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
@@ -276,43 +289,7 @@ const page = () => {
                       height="20"
                     />
                     <p>
-                    Product Information
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
-                    <img
-                      alt="blue tick"
-                      className="mt-[3px]"
-                      src="/blue-tick.svg"
-                      width="20"
-                      height="20"
-                    />
-                    <p>
-                    Office Address Proof
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
-                    <img
-                      alt="blue tick"
-                      className="mt-[3px]"
-                      src="/blue-tick.svg"
-                      width="20"
-                      height="20"
-                    />
-                    <p>
-                    Identity and Address Proof of Authorized Representative
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-[10px] md:text-[18px] ">
-                    <img
-                      alt="blue tick"
-                      className="mt-[3px]"
-                      src="/blue-tick.svg"
-                      width="20"
-                      height="20"
-                    />
-                    <p>
-                    Factory Layout Plan and list of Machinery, if applicable
+                      Factory Layout Plan and list of Machinery, if applicable
                     </p>
                   </li>
                 </ul>

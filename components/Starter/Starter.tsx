@@ -24,7 +24,7 @@ const CompanyRegistration: React.FC<CompanyRegistrationProps> = ({
     <div className="mx-6 md:m-auto md:w-fit bg-[#F5FAFF] max-w-[90%] lg:max-w-[1000px] xl:max-w-[1150px] 2xl:max-w-[1400px] pt-8  pb-6 md:pb-10 relative">
       <div className="flex flex-col md:flex-row gap-4 md:gap-10 lg:gap-20 xl:justify-between">
         <div className="flex flex-col gap-4 md:!gap-6 min-w-0 flex-shrink">
-          <div className="text-white">
+          {/* <div className="text-white">
             <div className="flex gap-2 overflow-hidden">
               <div className="flex gap-3">
                 <a
@@ -50,7 +50,7 @@ const CompanyRegistration: React.FC<CompanyRegistrationProps> = ({
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <h1 className=" text-[28px] md:text-[36px] slidein500 font-bold text-black leading-[1.2] md:leading-[52px]">
             {title}
           </h1>

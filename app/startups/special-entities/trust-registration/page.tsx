@@ -2,9 +2,9 @@ import CustomFaq from "@/components/Faq/CustomFaq";
 import CompanyRegistration from "@/components/Starter/Starter";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'Trust Registration'
-}
+export const metadata: Metadata = {
+  title: "Trust Registration",
+};
 const descriptions = [
   "Our Team at Bizzonns helps you in the documentation and end-to-end process of getting a Trust Incorporated.",
   "They also guide you with the After Formation Process of the Trust.",
@@ -35,7 +35,7 @@ const faqs = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Trust Formation"
           parent="Startup"
@@ -47,10 +47,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -112,10 +108,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
               <span className="text-[#fd8115]"> {""}Trust Formation </span>
@@ -128,35 +120,47 @@ const page = () => {
           {/** Column 1 **/}
           <div className="flex flex-col">
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Legal Validity
-              </h1>
+              <h1 className="text-xl font-bold">Legal Validity</h1>
               <p className="mt-3">
-              Registered trusts are legally recognized entities. Registration provides authenticity and ensures that the trust is valid under the law. It adds a layer of legitimacy to the trust’s operations and activities.
+                Registered trusts are legally recognized entities. Registration
+                provides authenticity and ensures that the trust is valid under
+                the law. It adds a layer of legitimacy to the trust’s operations
+                and activities.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
               <h1 className="text-xl font-bold">Tax Benefits</h1>
               <p className="mt-3">
-              Depending on the nature of the trust and its activities, registration can provide tax benefits. Charitable and religious trusts, for instance, can apply for tax exemption under sections 12A and 80G of the Income Tax Act, making donations to the trust eligible for tax deductions.
+                Depending on the nature of the trust and its activities,
+                registration can provide tax benefits. Charitable and religious
+                trusts, for instance, can apply for tax exemption under sections
+                12A and 80G of the Income Tax Act, making donations to the trust
+                eligible for tax deductions.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
               <h1 className="text-xl font-bold">Transparency</h1>
               <p className="mt-3">
-              Registration involves disclosing the trust’s objectives, activities, and financial details to the authorities. This transparency can foster trust among beneficiaries, donors, and the public.
+                Registration involves disclosing the trust’s objectives,
+                activities, and financial details to the authorities. This
+                transparency can foster trust among beneficiaries, donors, and
+                the public.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
               <h1 className="text-xl font-bold">Legal Protections</h1>
               <p className="mt-3">
-              Registered trusts have a legal framework that outlines their operations and governance. This can offer protection to trustees from legal liabilities arising from their actions as long as they act in accordance with the trust’s objectives and the law.
+                Registered trusts have a legal framework that outlines their
+                operations and governance. This can offer protection to trustees
+                from legal liabilities arising from their actions as long as
+                they act in accordance with the trust’s objectives and the law.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl flex-1">
               <h1 className="text-xl font-bold">Easy Succession</h1>
               <p className="mt-3">
-              Registered trusts can easily add or replace trustees without affecting the continuity of the trust’s operations.
+                Registered trusts can easily add or replace trustees without
+                affecting the continuity of the trust’s operations.
               </p>
             </div>
           </div>
@@ -164,43 +168,45 @@ const page = () => {
           {/** Column 2 **/}
           <div className="flex flex-col">
             <div className="p-7 bg-white shadow-xl mb-5 rounded-2xl flex-1">
-              <h1 className="text-xl font-bold">
-              Perpetual Existence
-              </h1>
+              <h1 className="text-xl font-bold">Perpetual Existence</h1>
               <p className="mt-3">
-              A registered trust enjoys perpetual existence. Unlike individuals, trusts don’t have a limited lifespan. This ensures that the trust’s objectives and activities can continue even after the founders or initial trustees are no longer involved.
+                A registered trust enjoys perpetual existence. Unlike
+                individuals, trusts don’t have a limited lifespan. This ensures
+                that the trust’s objectives and activities can continue even
+                after the founders or initial trustees are no longer involved.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Credibility and Acceptance
-              </h1>
+              <h1 className="text-xl font-bold">Credibility and Acceptance</h1>
               <p className="mt-3">
-              Registered trusts are often perceived as more credible and reliable by stakeholders, donors, and the public. This can lead to increased support and donations for the trust’s activities.
+                Registered trusts are often perceived as more credible and
+                reliable by stakeholders, donors, and the public. This can lead
+                to increased support and donations for the trust’s activities.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Easy Transfer
-              </h1>
+              <h1 className="text-xl font-bold">Easy Transfer</h1>
               <p className="mt-3">
-              Registered trusts can easily transfer or hold property and assets in their name. This simplifies the process of acquiring and managing assets for the trust’s activities.
+                Registered trusts can easily transfer or hold property and
+                assets in their name. This simplifies the process of acquiring
+                and managing assets for the trust’s activities.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Recognition for Fundraising
-              </h1>
+              <h1 className="text-xl font-bold">Recognition for Fundraising</h1>
               <p className="mt-3">
-              Registered trusts have an advantage when it comes to fundraising. Many donors and funding organizations prefer to support registered trusts because of the legal oversight and accountability they offer.
+                Registered trusts have an advantage when it comes to
+                fundraising. Many donors and funding organizations prefer to
+                support registered trusts because of the legal oversight and
+                accountability they offer.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl flex-1">
-              <h1 className="text-xl font-bold">
-              Government Benefits
-              </h1>
+              <h1 className="text-xl font-bold">Government Benefits</h1>
               <p className="mt-3">
-              Depending on the trust’s objectives, it might be eligible for government grants, subsidies, or support, which can aid its activities.
+                Depending on the trust’s objectives, it might be eligible for
+                government grants, subsidies, or support, which can aid its
+                activities.
               </p>
             </div>
           </div>
@@ -211,16 +217,15 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Trust Deed
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
-            Trust Deed
+              Trust Deed
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
               <p className="text-sm lg:text-base">
-              A trust can be created through spoken or written communication, and a trust deed is not necessary. But in some circumstances, a Trust Deed is both preferred and necessary. A written Trust deed is not required but is preferred when there is a public Trust.
+                A trust can be created through spoken or written communication,
+                and a trust deed is not necessary. But in some circumstances, a
+                Trust Deed is both preferred and necessary. A written Trust deed
+                is not required but is preferred when there is a public Trust.
               </p>
             </div>
           </div>
@@ -244,12 +249,8 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Advantages
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-            Advantages of
+              Advantages of
               <span className="text-[#fd8115]"> {""}Trust Formation </span>
             </h2>
           </div>
@@ -260,23 +261,32 @@ const page = () => {
           {/** Column 1 **/}
           <div className="flex flex-col">
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Charitable Activities
-              </h1>
+              <h1 className="text-xl font-bold">Charitable Activities</h1>
               <p className="mt-3">
-              Trusts are commonly formed for charitable, philanthropic, and social welfare purposes. They provide a structured and organized way to contribute to causes such as education, healthcare, poverty alleviation, and community development.
+                Trusts are commonly formed for charitable, philanthropic, and
+                social welfare purposes. They provide a structured and organized
+                way to contribute to causes such as education, healthcare,
+                poverty alleviation, and community development.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
               <h1 className="text-xl font-bold">Perpetual Existence</h1>
               <p className="mt-3">
-              Trusts have a perpetual existence, separate from the individuals who created them. This means that even if the founders or initial trustees change or pass away, the trust’s activities can continue as long as they align with its objectives.
+                Trusts have a perpetual existence, separate from the individuals
+                who created them. This means that even if the founders or
+                initial trustees change or pass away, the trust’s activities can
+                continue as long as they align with its objectives.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl flex-1">
-              <h1 className="text-xl font-bold">Recognition for Grants and Funding</h1>
+              <h1 className="text-xl font-bold">
+                Recognition for Grants and Funding
+              </h1>
               <p className="mt-3">
-              Many governmental and non-governmental organizations prefer to provide grants and funding to registered trusts due to the transparency and accountability associated with their operations.
+                Many governmental and non-governmental organizations prefer to
+                provide grants and funding to registered trusts due to the
+                transparency and accountability associated with their
+                operations.
               </p>
             </div>
           </div>
@@ -284,27 +294,29 @@ const page = () => {
           {/** Column 2 **/}
           <div className="flex flex-col">
             <div className="p-7 bg-white shadow-xl mb-5 rounded-2xl flex-1">
-              <h1 className="text-xl font-bold">
-              Legal Recognition
-              </h1>
+              <h1 className="text-xl font-bold">Legal Recognition</h1>
               <p className="mt-3">
-              Registered trusts have legal recognition, which lends credibility and authenticity to their activities. This recognition can attract donors, supporters, and beneficiaries who are more likely to engage with a registered entity.
+                Registered trusts have legal recognition, which lends
+                credibility and authenticity to their activities. This
+                recognition can attract donors, supporters, and beneficiaries
+                who are more likely to engage with a registered entity.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl mb-5 flex-1">
-              <h1 className="text-xl font-bold">
-              Asset Protection
-              </h1>
+              <h1 className="text-xl font-bold">Asset Protection</h1>
               <p className="mt-3">
-              Trusts offer a level of protection for assets. By transferring assets to the trust, they are separated from the personal assets of the trustees and founders, reducing the risk of personal liability.
+                Trusts offer a level of protection for assets. By transferring
+                assets to the trust, they are separated from the personal assets
+                of the trustees and founders, reducing the risk of personal
+                liability.
               </p>
             </div>
             <div className="p-7 bg-white shadow-xl rounded-2xl flex-1">
-              <h1 className="text-xl font-bold">
-              Fundraising and Donations
-              </h1>
+              <h1 className="text-xl font-bold">Fundraising and Donations</h1>
               <p className="mt-3">
-              Trusts can conduct fundraising activities and solicit donations more effectively due to their legal recognition and the tax benefits offered to donors.
+                Trusts can conduct fundraising activities and solicit donations
+                more effectively due to their legal recognition and the tax
+                benefits offered to donors.
               </p>
             </div>
           </div>

@@ -1,17 +1,92 @@
-import Faq from "@/components/Faq";
+import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'Private Limited Company'
-}
+import ComplianceTable from "@/components/CompliancesTable";
+export const metadata: Metadata = {
+  title: "Private Limited Company",
+};
+const faqs = [
+  {
+    question: "What is the Minimum Capital required for Company Formation?",
+    answer:
+      "As per the Companies Act 2013, there is no minimum capital limit for starting a Private Limited Company. It is advisable to incorporate with 1 Lakh. ",
+  },
+  {
+    question: "What is Authorized Share Capital in Private Limited Company?",
+    answer:
+      "Authorized Share Capital is the maximum amount of Capital that a Private limited company can raise by issuing its shares. In future, the company wants to raise funds by issuing fresh equity shares, then it can increase the Company’s Authorized Share Capital.",
+  },
+  {
+    question: "What is Paid up capital in Private Limited Company ?",
+    answer:
+      "Paid Up Capital is the actual amount paid by the Shareholders for the equity shares issued to them by the Company.  This amount can be equal to or less than the Authorized Share Capital.",
+  },
+  {
+    question: "How many Persons are required to incorporate a company?",
+    answer:
+      "Minimum 2 Members are required to start a private limited company in India, which can be extended to 200 members.",
+  },
+  {
+    question:
+      "Is it necessary that Directors and Shareholders should be the same?",
+    answer:
+      "Directors are the Employees of the Company, whereas Shareholders are the owners of the Company. Thus, the Directors and Shareholders of the Company can be different from each other.",
+  },
+  {
+    question:
+      "Is it possible to transfer ownership of the Private Limited Company?",
+    answer:
+      "Just by transferring the equity shares of the Company, one can transfer its ownership to the other person. ",
+  },
+  {
+    question: "When the First Statutory Auditor needs to be appointed?",
+    answer:
+      "First Statutory Auditor needs to be appointed by the Board of Directors within 30 days of the Formation of Company.",
+  },
+];
 const descriptions = [
   "This is the most suitable for startups looking for Investor Funding and Growing Businesses.",
   "Our Team at Bizzonns consists of qualified and vast experienced personnel, who after attending to your requirements, will recommend you the best suitable form for your business.",
   "Professional Charges start at Rs 4,999/- Onwards",
 ];
+const data = [
+  {
+    form: "ADT 1",
+    dueDate: "Within 15 days of AGM",
+    particulars: "For appointment of company auditor (CA).",
+  },
+  {
+    form: "AOC 4",
+    dueDate: "Within 30 days of AGM",
+    particulars:
+      "For financial report to ROC (Balance sheet and Profit/loss statement).",
+  },
+  {
+    form: "MGT 7",
+    dueDate: "Within 60 days of AGM",
+    particulars:
+      "For annual reporting of company to ROC related to share holders and other matters of company.",
+  },
+  {
+    form: "DPT 3",
+    dueDate: "30th June",
+    particulars: "To report existing loan on Company.",
+  },
+  {
+    form: "DIR 3",
+    dueDate: "30th September",
+    particulars: "For Director KYC.",
+  },
+  {
+    form: "ITR",
+    dueDate: "30th September",
+    particulars: "For Income tax return of the company.",
+  },
+];
+
 
 const processItems = [
   {
@@ -197,7 +272,7 @@ const processItems = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Private Limited Company"
           parent="Startup"
@@ -209,10 +284,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -261,10 +332,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
               <span className="text-[#fd8115]"> Private Limited Company </span>
@@ -343,10 +410,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation For
               <span className="text-[#fd8115]"> Private Limited Company </span>
@@ -467,17 +530,107 @@ const page = () => {
       </section>
 
       <Process processItems={processItems} />
+      <section className="relative scroll-mt-20 flex-none mx-auto xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm px-4 lg:px-10  my-5 md:my-0 lg:my-16">
+        <div className="flex flex-col w-full gap-4 lg:flex-row">
+          {/* Text Section */}
+          <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
+            <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
+              <span className="text-[#fd8115]"> Compliances </span>
+            </h2>
+            <div className="font-medium text-[#606162] dark:text-gray-400">
+              <div className="p-5  ">
+                <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-2xl lg:text-3xl lg:mb-2 font-semibold">
+                  First-time Compliance
+                </h2>
+                <p className="md:text-[18px] mb-5">
+                  After company incorporation, it needs to comply with the
+                  following list of Compliances with MCA
+                </p>
+                <ul className="flex flex-col gap-3 max-md:py-5 noListMargin">
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      Commencement of Business (INC 20A) - This needs to be
+                      filed within 180 days of Company Formation, once the Bank
+                      account is opened and the share application money is
+                      trans-ferred into that account.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      Share Certificate Franking and Stamping – Company needs to
+                      issue a share certificate to all the shareholders and
+                      needs to be stamped.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-[10px] md:text-[18px]">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      Auditor Appointment – This Needs to be done within 30 days
+                      of Company Formation after holding an Annual General
+                      Meeting.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="p-5  ">
+                <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-2xl lg:text-3xl lg:mb-2 font-semibold">
+                  Yearly Compliances
+                </h2>
+                <ul className="flex flex-col gap-3 max-md:py-5 noListMargin">
+                  <li className="flex items-start gap-[10px] md:text-[18px] ">
+                    <img
+                      alt="blue tick"
+                      className="mt-[3px]"
+                      src="/blue-tick.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <p>
+                      All company Pvt ltd, OPC, Public limited are bound to file
+                      ROC and Income Tax compliance after end of each financial
+                      year i.e 31st March within prescribed timeline mentioned
+                      in Income tax and companies act. Major compliance forms
+                      details and due dates are mentioned below:-
+                    </p>
+                  </li>
+                </ul>
+                <ComplianceTable data={data} />
+                <p className="text-[16px] my-5">
+                  <b>Note: </b>Annual general meeting (AGM) need to be held
+                  between company officials and Shareholders by and before 6
+                  month of the end of each Financial Year.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="relative scroll-mt-20 flex-none mx-auto xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm px-4 lg:px-10  my-5 md:my-0 lg:my-16 mb-10">
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              COMPARISON
-            </p>
-
             <h2 className="text-[#2a2a2a]  dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Comparison
-              <span className="text-[#fd8115]"> Compliances </span>
+              <span className="text-[#fd8115]"> Comparision with other format </span>
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
               <p className="text-sm lg:text-base mt-3 text-center">
@@ -499,7 +652,7 @@ const page = () => {
         </div>
       </section>
       <ComparisonTable index={6} />
-      <Faq />
+      <CustomFaq faqs={faqs} />
     </div>
   );
 };

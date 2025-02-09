@@ -4,9 +4,9 @@ import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'UDYAM Registration'
-}
+export const metadata: Metadata = {
+  title: "UDYAM Registration",
+};
 const descriptions = [
   "The MSME sector includes micro, small, and medium-sized enterprises. The classification is based on investment in plant and machinery or equipment and turnover of the enterprises.",
   "A micro enterprise, where the investment in plant and machinery or equipment does not exceed one crore rupees and turnover does not exceed five crore rupees;",
@@ -41,7 +41,8 @@ const faqs = [
       "No, UDYAM registration is free of cost. There is no registration fee involved.",
   },
   {
-    question: "Can I register multiple MSMEs under a single UDYAM registration?",
+    question:
+      "Can I register multiple MSMEs under a single UDYAM registration?",
     answer:
       "No, each MSME should have its separate UDYAM registration and unique Udyam Registration Number (URN). ",
   },
@@ -61,17 +62,17 @@ const faqs = [
       "Yes, partnership firms, as well as other business entities like proprietorships, LLPs, and private limited companies, can apply for UDYAM registration.",
   },
   {
-    question: "Can I update my UDYAM registration details if there are changes in my business?",
+    question:
+      "Can I update my UDYAM registration details if there are changes in my business?",
     answer:
       "Yes, you can update certain details of your UDYAM registration, such as contact information or bank account details, whenever there are changes in your business.",
   },
-  
 ];
 
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="UDYAM (MSME) registration,"
           parent="license"
@@ -83,10 +84,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Eligibility
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Eligibility
             </h2>
@@ -120,10 +117,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              BENEFITS
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
               <span className="text-[#fd8115]">

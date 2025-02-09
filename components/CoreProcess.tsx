@@ -177,11 +177,11 @@ const CoreProcess: React.FC = () => {
   }, []);
 
   return (
-    <div className=" text-black dark:text-white text-opacity-100 p-6">
-      <div className="prome-j59otj md:my-24 ">
+    <div className=" text-black dark:text-white text-opacity-100 px-6">
+      <div className="prome-j59otj md:my-10 ">
         <div className="prome-dhhden my-[20px]">
           <h2 className="prome-vnfh11">Our Core Process</h2>
-          <a href="/about" className="prome-95p069 group">
+          {/* <a href="/about" className="prome-95p069 group">
             <span className="prome-fljove">Explore</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ const CoreProcess: React.FC = () => {
             >
               <path d="m9 18 6-6-6-6" stroke="currentColor" strokeWidth="2" />
             </svg>
-          </a>
+          </a> */}
         </div>
         <div
           id="scroll-list"

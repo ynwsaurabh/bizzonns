@@ -36,7 +36,7 @@ const Locations = () => {
   return (
     <div className="max-w-7xl mx-auto text-center font-inter py-12 pb-12 overflow-hidden">
       <div className="font-inter mx-5 lg:mx-0" data-aos="fade-right">
-        <h1 className="text-4xl leading-tight text-gray-900 dark:text-white font-bold">
+        <h1 className="text-5xl leading-tight text-gray-900 dark:text-white font-bold">
         Visit Us at Our Locations
         </h1>
         <p className="text-black dark:text-white font-light text-base">

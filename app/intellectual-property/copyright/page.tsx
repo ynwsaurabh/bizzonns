@@ -5,9 +5,9 @@ import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'Copyright'
-}
+export const metadata: Metadata = {
+  title: "Copyright",
+};
 const descriptions = [
   "Start using © symbol with our Guaranteed 5-7 Days Filing T&C*.",
   "Transparent process through follow-up and regular updates. Filing your copyright starts from ₹2999 + Govt fees ",
@@ -20,12 +20,14 @@ const faqs = [
       "A copyright registration does not protect the titles or names, short words, slogans, or any phrases. Only original literary work can get copyright registration.",
   },
   {
-    question: "What is the difference between Copyright registration and trademark registration?",
+    question:
+      "What is the difference between Copyright registration and trademark registration?",
     answer:
       "Trademark registration protects the brand name, logo the slogan whereas copyright protection is provided to literary works, music, videos, slogans, and artistic contents.",
   },
   {
-    question: "Copyright obtained in India is only valid in India or across the world?",
+    question:
+      "Copyright obtained in India is only valid in India or across the world?",
     answer:
       "According to the Berne Convention, copyright obtained in India will get the status of foreign workers and the copyright protection is extended to the countries which are signatories to the Berne Convention.",
   },
@@ -49,7 +51,7 @@ const faqs = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Copyright Registration"
           parent="Registration"
@@ -61,10 +63,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -155,10 +153,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits of
               <span className="text-[#fd8115]"> Copyright Registration </span>
@@ -234,10 +228,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation
               <span className="text-[#fd8115]"> Copyright Registration</span>
@@ -364,10 +354,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Advantages
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Advantages of
               <span className="text-[#fd8115]">

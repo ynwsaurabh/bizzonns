@@ -82,7 +82,7 @@ const DesktopMenu: FC<DesktopMenuProps> = ({ menu }) => {
               menu.subMenu?.map((submenu: SubMenu, i: number) => (
                 <div className="relative cursor-pointer" key={i}>
                   {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
-                    <p className="text-sm mb-4 text-gray-500">
+                    <p className="text-sm mb-4 text-[#2a2a2a]">
                       {menu?.subMenuHeading?.[i]}
                     </p>
                   )}

@@ -5,9 +5,9 @@ import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
 import { Metadata } from "next";
-export const metadata:Metadata ={
-  title:'Subsidiary Company'
-}
+export const metadata: Metadata = {
+  title: "Subsidiary Company",
+};
 const descriptions = [
   "Forming a subsidiary foreign company in India involves establishing a separate legal entity that is controlled by a foreign parent company. This legal structure allows the parent company to conduct business operations and expand its presence in the Indian market.",
   "Professional Charges start at Rs 35,999/- Onwards",
@@ -232,7 +232,7 @@ const processItems = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Subsidiary Company"
           parent="Startup"
@@ -244,10 +244,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -284,10 +280,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Required Documents
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Required Documents For
               <span className="text-[#fd8115]"> Subsidiary Company </span>
@@ -410,10 +402,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
               <span className="text-[#fd8115]"> Subsidiary Company </span>
@@ -493,21 +481,18 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Compliances
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-            Compliances For
+              Compliances For
               <span className="text-[#fd8115]"> Subsidiary Company </span>
             </h2>
             <div className="font-medium text-[#606162] dark:text-gray-400">
               <div className="p-5  ">
                 <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-2xl lg:text-3xl lg:mb-2 font-semibold">
-                First-time Compliance:-
+                  First-time Compliance:-
                 </h2>
                 <p>
-                After company incorporation, it needs to comply with the following list of Compliances with MCA –
+                  After company incorporation, it needs to comply with the
+                  following list of Compliances with MCA –
                 </p>
                 <ul className="flex flex-col gap-3 max-md:py-5 noListMargin">
                   <li className="flex items-start gap-[10px] md:text-[18px] ">
@@ -518,7 +503,12 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p><strong>Commencement of Business (INC 20A) –</strong> This needs to be filed within 180 days of Company Formation, once the Bank account is opened and the share application money is transferred into that account.</p>
+                    <p>
+                      <strong>Commencement of Business (INC 20A) –</strong> This
+                      needs to be filed within 180 days of Company Formation,
+                      once the Bank account is opened and the share application
+                      money is transferred into that account.
+                    </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -528,7 +518,11 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p><strong>Share Certificate Franking and Stamping –</strong> The company needs to issue a share certificate to all the shareholders and be stamped.</p>
+                    <p>
+                      <strong>Share Certificate Franking and Stamping –</strong>{" "}
+                      The company needs to issue a share certificate to all the
+                      shareholders and be stamped.
+                    </p>
                   </li>
                   <li className="flex items-start gap-[10px] md:text-[18px]">
                     <img
@@ -538,7 +532,11 @@ const page = () => {
                       width="20"
                       height="20"
                     />
-                    <p><strong>Auditor Appointment – </strong> This Needs to be done within 30 days of Company Formation after holding an Annual General Meeting.</p>
+                    <p>
+                      <strong>Auditor Appointment – </strong> This Needs to be
+                      done within 30 days of Company Formation after holding an
+                      Annual General Meeting.
+                    </p>
                   </li>
                 </ul>
               </div>

@@ -1,4 +1,4 @@
-import Faq from "@/components/Faq";
+import CustomFaq from "@/components/Faq/CustomFaq";
 import Process from "@/components/Process";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
@@ -7,6 +7,38 @@ import { Metadata } from "next";
 export const metadata:Metadata ={
   title:'Partnership Firm Registration'
 }
+const faqs = [
+  {
+    question: "Whether Registration of a Partnership Firm is compulsory?",
+    answer:
+      "The Partnership Act allows both Registered and unregistered Partnerships to operate.The only difference between the both is, the Unregistered Partnership Deed needs to be notarized by a Notary public and Registered Partnership needs to be submitted at ROF.",
+  },
+  {
+    question: "How many individuals are needed to establish a partnership firm?",
+    answer:
+      "A minimum of two partners and a maximum of 20 partners are allowed in a partnership firm.",
+  },
+  {
+    question: "Is an Audit required for a Partnership Firm?",
+    answer:
+      "There is no applicability of Statutory Audit in the case of the Firm. However, Tax audits may be applicable depending on the Turnover of the Partnership Firm.",
+  },
+  {
+    question: "Can Partnership Firm be converted into a Private Limited Company or LLP?",
+    answer:
+      "A Partnership Firm can be converted into a Private Limited Company or an LLP, but the conversion process is expensive and time-consuming. Thus, it is advisable for entrepreneurs to choose their business structure wisely.",
+  },
+  {
+    question: "s it compulsory to make Partnership Deed?",
+    answer:
+      "Partnership Deed is a written legal document that contains all the rights and duties of the partners. Partnership deed can be written or verbal but it is advisable to have a written partnership deed. ",
+  },
+  {
+    question: "How much amount of Capital is required to start a Partnership Firm?",
+    answer:
+      "There is no Minimum amount of Capital required to form and start a Partnership Firm.",
+  },
+];
 const descriptions = [
   "Ideal for Small Scale Business Size.",
   "Our Professional Team understands your requirements and assists you in selecting the Best Suitable Business Structure.",
@@ -173,7 +205,7 @@ const processItems = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Partnership Firm Registration"
           parent="Startup"
@@ -185,10 +217,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Overview
-            </p>
-
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
             </h2>
@@ -227,10 +255,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Benefits
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Benefits Of
               <span className="text-[#fd8115]">
@@ -311,11 +335,7 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Documentation
-            </p>
-
-            <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
+   <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Documentation For
               <span className="text-[#fd8115]">
                 {" "}
@@ -416,12 +436,7 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              COMPARISON
-            </p>
-
             <h2 className="text-[#2a2a2a]  dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Comparison
               <span className="text-[#fd8115]"> Compliances </span>
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -444,7 +459,7 @@ const page = () => {
         </div>
       </section>
       <ComparisonTable index={5} />
-      <Faq />
+      <CustomFaq faqs={faqs} />
     </div>
   );
 };

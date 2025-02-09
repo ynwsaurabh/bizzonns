@@ -9,6 +9,7 @@ interface Product {
   title: string;
   image: string;
   description: string;
+  price?: string;
   isUnderConstruction?: boolean;
 }
 
@@ -17,6 +18,7 @@ const products: Product[] = [
     href: "/",
     title: "Private Limited Company",
     image: "/plc.png",
+    price: "5999",
     description:
       "Private Limited is the most common company structure for new ventures. The formation of a Private Limited Corporate entity is a smooth process with limited set of documentation and several advantages.",
   },
@@ -24,6 +26,7 @@ const products: Product[] = [
     href: "/",
     title: "Limited Liability Partnership",
     image: "/llp.png",
+    price: "4999",
     description:
       "A limited liability partnership firm is a straightforward business form founded on mutual consent. The benefits of a partnership firm and a corporation are combined in an LLP.",
   },
@@ -31,6 +34,7 @@ const products: Product[] = [
     href: "/",
     title: "Trademark Registration",
     image: "/tm.png",
+    price: "1499",
     description:
       "It is critical to pursue Trademark Registration in order to identify and protect your product or service, as well as your hard-earned brand, from competitors in the market.",
   },
@@ -38,6 +42,7 @@ const products: Product[] = [
     href: "/",
     title: "PSARA License",
     image: "/psara.png",
+    price: "14,999",
     description:
       "For Starting a Security Business in India, it is mandatory to obtain a PSARA License from Home Department. We provide PAN India Service with easy documentation drafting and online submission.",
   },
@@ -45,6 +50,7 @@ const products: Product[] = [
     href: "/",
     title: "DRUG License",
     image: "/drug.png",
+    price: "7999",
     description:
       "Anyone who wants to get into Medical Business needs to get a DRUG License from the respective State Government. We provide PAN India Service with application drafting and online submission.",
   },
@@ -52,6 +58,7 @@ const products: Product[] = [
     href: "/",
     title: "Startup India",
     image: "/startup.png",
+    price: "3999",
     description:
       "It is an Initiative started by the government. In this initiative start-ups and existing business gets various benefits from the government.",
   },
@@ -65,12 +72,12 @@ const Services: FC = () => {
       id="products"
       className="max-w-7xl mx-auto antialiased py-10 md:py-20 px-8 overflow-hidden"
     >
-      <div className="mt-4 text-xs z-40 w-fit bg-white dark:bg-gray-800 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
+      {/* <div className="mt-4 text-xs z-40 w-fit bg-white dark:bg-gray-800 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
         <span>Expert Services</span>
         <div className="absolute inset-x-0 -bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-px w-full"></div>
-      </div>
+      </div> */}
       <h1 className="text-2xl md:text-4xl text-neutral-800 dark:text-white mt-4 text-left mb-2 relative z-40">
-        Let’s See Our 100+ Services
+        Our 100+ Services
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-between">
         <p className="mt-8 text-neutral-600 dark:text-neutral-400 max-w-2xl">
@@ -216,7 +223,7 @@ const Services: FC = () => {
 
                 {/* Pricing Information */}
                 <p className="mt-2 text-center mx-5 md:mx-7 text-base text-gray-900 dark:text-gray-100 font-semibold">
-                  Starting at Rs 1000/-{" "}
+                  Starting at Rs {product.price}/-{" "}
                   <span className="text-gray-500">
                     (Applicable taxes and Govt fees extra)
                   </span>

@@ -11,12 +11,12 @@ const About = () => {
     });
   }),[]
   return (
-    <div id="aboutus" className="w-full h-full overflow-hidden  ">
-      <div className="max-w-7xl md:max-w-[85%] mx-auto antialiased py-4 md:py-8 px-8 ">
-        <div className="mt-4 text-xs z-10 w-fit bg-white dark:bg-gray-900 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
+    <div id="aboutus" className="w-full h-screen overflow-hidden flex flex-col  items-center justify-center  ">
+      <div className="max-w-7xl md:max-w-[85%] mx-auto antialiased py-4 md:pl-8 pl-8 flex items-start">
+        {/* <div className="mt-4 text-xs z-10 w-fit bg-white dark:bg-gray-900 text-neutral-700 dark:text-neutral-300 rounded-full shadow-xl px-4 py-0.5 border border-neutral-100 dark:border-gray-700 relative">
           <span>#1 CONSULTING COMPANY</span>
           <div className="absolute inset-x-0 -bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-px w-full"></div>
-        </div>
+        </div> */}
         <h1 data-aos="fade-down" className="text-2xl md:text-4xl text-neutral-800 dark:text-white mt-4 text-left">
           About Us
         </h1>

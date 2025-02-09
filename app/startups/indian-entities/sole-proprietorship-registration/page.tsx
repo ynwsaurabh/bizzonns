@@ -1,4 +1,4 @@
-import Faq from "@/components/Faq";
+import CustomFaq from "@/components/Faq/CustomFaq";
 import CompanyRegistration from "@/components/Starter/Starter";
 import ComparisonTable from "@/components/Table";
 import React from "react";
@@ -6,6 +6,38 @@ import { Metadata } from "next";
 export const metadata:Metadata ={
   title:'Sole Proprietorship Registration'
 }
+const faqs = [
+  {
+    question: "Is there any minimum requirement to open a Proprietorship?",
+    answer:
+      "There is no minimum capital requirement to start a Proprietorship Firm. It can be started by any single person who wants to do business in India.",
+  },
+  {
+    question: "What registrations are required for Sole proprietorship?",
+    answer:
+      "There is no Registration needed to start a business under a Proprietorship. To open a Current Bank Account, you need to get either GST or UDYAM Registration.",
+  },
+  {
+    question: "Is it necessary to get a Trade name for Proprietorship?",
+    answer:
+      "A sole Proprietorship can be started with your Personal Name also. But, it’s better to have a different and unique Trade Name for your business.",
+  },
+  {
+    question: "Can the Sole Proprietorship business be transferred to another person?",
+    answer:
+      "No, it is a Non-Transferable Business. It cannot be transferred to another person. It automatically ceases to exist, once the proprietor dies. ",
+  },
+  {
+    question: "Are there any compliances that need to be done for Sole Proprietorship?",
+    answer:
+      "The sole Proprietorship and the proprietor are the same people, thus only Income Tax returns and GST returns are to be filed. ",
+  },
+  {
+    question: "Does a New PAN card get issued in case of Proprietorship?",
+    answer:
+      "The PAN Card of the firm and the Proprietor is the same, as there is no separate legal identity between the two. The assets and liabilities will also remain the same.",
+  },
+];
 const descriptions = [
   "Suitable for a Single person who wants to start a business with the Zero or Minimum Fund.",
   "Bizzonns helps you in selecting the Best Suitable Format for your business by understanding your requirements and needs. It also helps you in getting your Business registered and operational.",
@@ -15,7 +47,7 @@ const descriptions = [
 const page = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div className="mt-16 bg-[#F5FAFF]">
+      <div className="pt-16 bg-[#F5FAFF]">
         <CompanyRegistration
           title="Sole Proprietorship Registration"
           parent="Startup"
@@ -27,9 +59,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row-reverse">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-            Overview
-            </p>
 
             <h2 className="text-[#fd8115] font-poppins text-3xl lg:text-4xl font-semibold">
               Overview
@@ -119,10 +148,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Required Documents
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Required Documents For
               <span className="text-[#fd8115]">
@@ -207,10 +232,6 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              Advantages
-            </p>
-
             <h2 className="text-[#2a2a2a] dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
               Advantages Of
               <span className="text-[#fd8115]">
@@ -282,12 +303,8 @@ const page = () => {
         <div className="flex flex-col w-full gap-4 lg:flex-row">
           {/* Text Section */}
           <div className="relative flex-1 flex flex-col gap-4 text-gray-900 dark:text-white lg:w-1/2 self-center">
-            <p className=" max-w-max text-sm rounded-full border border-[#2a2a2a] dark:border-white py-1.5 font-semibold uppercase px-5 text-center">
-              COMPARISON
-            </p>
 
             <h2 className="text-[#2a2a2a]  dark:text-white font-poppins text-3xl lg:text-4xl font-semibold">
-              Comparison
               <span className="text-[#fd8115]"> Compliances </span>
             </h2>
             <div className="font-medium text-gray-600 dark:text-gray-400">
@@ -315,7 +332,7 @@ const page = () => {
         </div>
       </section>
       <ComparisonTable index={6} />
-      <Faq />
+      <CustomFaq faqs={faqs} />
     </div>
   );
 };

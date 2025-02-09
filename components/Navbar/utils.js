@@ -101,27 +101,6 @@ export const Menus = [
     gridCols: 3,
   },
   {
-    name: "Intellectual Property",
-    subMenu: [
-      {
-        name: "Trade Mark",
-        href: "/intellectual-property/trademark",
-        icon: ChevronRight,
-      },
-      {
-        name: "Copyright",
-        href: "/intellectual-property/copyright",
-        icon: ChevronRight,
-      },
-      {
-        name: "Design",
-        href: "/intellectual-property/design",
-        icon: ChevronRight,
-      },
-    ],
-    gridCols: 1,
-  },
-  {
     name: "Audits & Tax",
     subMenuHeading: ["AUDITS", "TAXATION", "MONTHLY RETURNS"],
     subMenu: [
@@ -398,6 +377,27 @@ export const Menus = [
       
     ],
     gridCols: 3,
+  },
+  {
+    name: "Intellectual Property",
+    subMenu: [
+      {
+        name: "Trade Mark",
+        href: "/intellectual-property/trademark",
+        icon: ChevronRight,
+      },
+      {
+        name: "Copyright",
+        href: "/intellectual-property/copyright",
+        icon: ChevronRight,
+      },
+      {
+        name: "Design",
+        href: "/intellectual-property/design",
+        icon: ChevronRight,
+      },
+    ],
+    gridCols: 1,
   },
   {
     name: "Payment",
