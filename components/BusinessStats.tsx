@@ -2,25 +2,25 @@ import StatCard from "./StatCard";
 
 const StatContent = [
   {
-    title: "Members",
-    value: "2,245,341",
+    title: "Clients Serverd",
+    value: "6000 +",
     imgUrl: "/members.svg",
   },
-  {
-    title: "Clubs",
-    value: "46,328",
-    imgUrl: "/club.svg",
-  },
-  {
-    title: "Event Bookings",
-    value: "828,267",
-    imgUrl: "/event.svg",
-  },
-  {
-    title: "Payments",
-    value: "1,926,436",
-    imgUrl: "/payment.svg",
-  },
+  // {
+  //   title: "Clubs",
+  //   value: "46,328",
+  //   imgUrl: "/club.svg",
+  // },
+  // {
+  //   title: "Event Bookings",
+  //   value: "828,267",
+  //   imgUrl: "/event.svg",
+  // },
+  // {
+  //   title: "Payments",
+  //   value: "1,926,436",
+  //   imgUrl: "/payment.svg",
+  // },
 ];
 
 const BusinessStats: React.FC = () => {
@@ -36,7 +36,8 @@ const BusinessStats: React.FC = () => {
           We reached here with our hard work and dedication.
         </p>
       </div>
-      <div className="grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-8 mt-5">
+      {/* <div className="grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-8 mt-5"> */}
+      <div className="grid grid-cols-1 gap-8 mt-5">
         {StatContent.map((card) => (
           <StatCard key={card.title} {...card} />
         ))}
